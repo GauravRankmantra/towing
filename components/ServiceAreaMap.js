@@ -61,8 +61,8 @@ export default function ServiceAreaMap() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Interactive Map */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="relative"
@@ -71,8 +71,9 @@ export default function ServiceAreaMap() {
               {/* Map Background */}
               <Image
                 src={mapImg}
+                alt="Coverage Map"
                 className="absolute h-full object-cover inset-0 bg-gradient-to-br from-blue-200/30 to-blue-300/30"
-              ></Image>
+              />
 
               {/* Dispatch Centers */}
               <div className="relative h-full w-full">
@@ -134,8 +135,8 @@ export default function ServiceAreaMap() {
 
           {/* Dispatch Centers Info */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-6"

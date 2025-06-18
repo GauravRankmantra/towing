@@ -1,38 +1,41 @@
 "use client";
 
-// Removed useEffect as keyframes will be in global CSS
-
-import { motion } from "framer-motion"; // Assuming you have framer-motion installed
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
     name: "Emily Johnson",
     location: "Las Vegas, NV",
-    message: "Incredible towing service! Super fast and handled my vehicle with care.",
+    message:
+      "Incredible towing service! Super fast and handled my vehicle with care.",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
     name: "Jason Lee",
     location: "Henderson, NV",
-    message: "Had a breakdown at night — they showed up in 20 minutes. Absolutely reliable!",
+    message:
+      "Had a breakdown at night — they showed up in 20 minutes. Absolutely reliable!",
     image: "https://randomuser.me/api/portraits/men/35.jpg",
   },
   {
     name: "Sandra Williams",
     location: "North Las Vegas, NV",
-    message: "Affordable and professional. They made a stressful situation so much easier.",
+    message:
+      "Affordable and professional. They made a stressful situation so much easier.",
     image: "https://randomuser.me/api/portraits/women/12.jpg",
   },
   {
     name: "Robert Smith",
     location: "Paradise, NV",
-    message: "Best towing crew in the valley! Their long-distance towing was smooth and fast.",
+    message:
+      "Best towing crew in the valley! Their long-distance towing was smooth and fast.",
     image: "https://randomuser.me/api/portraits/men/22.jpg",
   },
   {
     name: "Angela Davis",
     location: "Spring Valley, NV",
-    message: "Locked my keys in the car — they were there in 15 minutes! Lifesavers!",
+    message:
+      "Locked my keys in the car — they were there in 15 minutes! Lifesavers!",
     image: "https://randomuser.me/api/portraits/women/65.jpg",
   },
 ];
@@ -77,12 +80,15 @@ export default function TestimonialTicker() {
                   className="w-16 h-16 rounded-full object-cover border-2 border-blue-400 p-[2px]" // Enhanced image border
                 />
                 <div>
-                  <p className="font-bold text-lg text-gray-900">{item.name}</p> {/* Bolder name */}
-                  <p className="text-sm text-gray-600">{item.location}</p> {/* Slightly darker location */}
+                  <p className="font-bold text-lg text-gray-900">{item.name}</p>{" "}
+                  {/* Bolder name */}
+                  <p className="text-sm text-gray-600">{item.location}</p>{" "}
+                  {/* Slightly darker location */}
                 </div>
               </div>
-              <p className="text-gray-800 text-base leading-relaxed italic"> {/* Italic and darker message */}
-                “{item.message}”
+              <p className="text-gray-800 text-base leading-relaxed italic">
+                {" "}
+                {/* Italic and darker message */}“{item.message}”
               </p>
             </motion.div>
           ))}
@@ -92,15 +98,21 @@ export default function TestimonialTicker() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 py-20 overflow-hidden"> {/* Softer gradient background */}
+    <section className="relative bg-gradient-to-br from-blue-50 py-20 overflow-hidden">
+      {" "}
+      {/* Softer gradient background */}
       {/* Fading edge gradients */}
-      <h1 className=" text-3xl md:text-5xl text-center font-extrabold text-gray-900 mb-16 leading-tight"> {/* Larger, bolder title */}
+      <h1 className=" text-3xl md:text-5xl text-center font-extrabold text-gray-900 mb-16 leading-tight">
+        {" "}
+        {/* Larger, bolder title */}
         What Our Clients Say
       </h1>
-      <div className="absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-blue-50 to-transparent z-10 pointer-events-none" /> {/* Wider, color-matched gradient */}
+      <div className="absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-blue-50 to-transparent z-10 pointer-events-none" />{" "}
+      {/* Wider, color-matched gradient */}
       <div className="absolute top-0 right-0 h-full w-32 bg-gradient-to-l from-blue-50 to-transparent z-10 pointer-events-none" />
-
-      <div className="space-y-10 px-0"> {/* Adjusted spacing and removed horizontal padding */}
+      <div className="space-y-10 px-0">
+        {" "}
+        {/* Adjusted spacing and removed horizontal padding */}
         {renderRow("left", 40)}
         {renderRow("right", 40)}
       </div>
