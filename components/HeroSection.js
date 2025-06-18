@@ -18,16 +18,14 @@ const backgroundImages = [
   "https://images.unsplash.com/photo-1675092910167-13382da372e6?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
-
 export default function HeroSection() {
-  // Animation variants for staggered text and elements
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.2, // Stagger children animations by 0.2 seconds
-        delayChildren: 0.3,   // Delay the start of children animations
+        delayChildren: 0.3, // Delay the start of children animations
       },
     },
   };
@@ -85,7 +83,9 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
       {/* Background Image Sections (visible on medium screens and up) */}
-      <div className="absolute inset-0 hidden md:flex z-0"> {/* hidden on small, flex on md and up */}
+      <div className="absolute inset-0 hidden md:flex z-0">
+        {" "}
+        {/* hidden on small, flex on md and up */}
         {backgroundImages.map((imageUrl, index) => (
           <motion.div
             key={index}
@@ -98,7 +98,6 @@ export default function HeroSection() {
           />
         ))}
       </div>
-
       {/* Single Background Image (visible on small screens only) */}
       <motion.div
         className="absolute inset-0 md:hidden bg-cover bg-center z-0" // visible on small, hidden on md and up
@@ -107,13 +106,14 @@ export default function HeroSection() {
         initial="hidden"
         animate="visible"
       />
-
       {/* Semi-transparent dark overlay to make text pop over diverse backgrounds */}
       {/* z-10 places it above the background images but below the main content */}
-      <div className="absolute inset-0 bg-black/40 z-10"></div> {/* Increased opacity slightly for better mobile text contrast */}
-
+      <div className="absolute inset-0 bg-black/40 z-10"></div>{" "}
+      {/* Increased opacity slightly for better mobile text contrast */}
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 py-16 md:py-24 text-center"> {/* z-20 ensures content is on top */}
+      <div className="relative z-20 container mx-auto px-4 py-16 md:py-24 text-center">
+        {" "}
+        {/* z-20 ensures content is on top */}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -144,22 +144,30 @@ export default function HeroSection() {
             <motion.a
               href="tel:+1234567"
               variants={buttonVariants}
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
+              }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center space-x-3 bg-blue-600 text-white px-6 py-3 rounded-full transition-all duration-300 ease-in-out text-base font-semibold shadow-xl" /* Adjusted padding/text size for mobile */
             >
-              <Phone className="h-5 w-5" /> {/* Adjusted icon size for mobile */}
+              <Phone className="h-5 w-5" />{" "}
+              {/* Adjusted icon size for mobile */}
               <span>Call Now : 1234567</span>
             </motion.a>
 
             <motion.a
               href="#" // Update with your actual service request page
               variants={buttonVariants}
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
+              }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center space-x-3 bg-transparent border-2 border-red-500 text-red-100 px-6 py-3 rounded-full hover:bg-red-500 hover:border-red-500 hover:text-white transition-all duration-300 ease-in-out text-base font-semibold shadow-xl" /* Adjusted padding/text size for mobile */
             >
-              <MessageSquare className="h-5 w-5" /> {/* Adjusted icon size for mobile */}
+              <MessageSquare className="h-5 w-5" />{" "}
+              {/* Adjusted icon size for mobile */}
               <span>Request Service</span>
             </motion.a>
           </motion.div>
@@ -175,10 +183,17 @@ export default function HeroSection() {
               variants={itemVariants}
               className="flex items-center justify-center space-x-3 md:space-x-4 bg-white/10 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-lg border border-white/20 text-white" /* Adjusted padding for mobile */
             >
-              <Clock className="h-8 w-8 md:h-10 md:w-10 text-blue-300" /> {/* Adjusted icon size for mobile */}
+              <Clock className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
+              {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold text-lg md:text-xl">15-30 Min</div> {/* Adjusted text size for mobile */}
-                <div className="text-xs md:text-sm text-blue-100">Response Time</div> {/* Adjusted text size for mobile */}
+                <div className="font-semibold text-lg md:text-xl">
+                  15-30 Min
+                </div>{" "}
+                {/* Adjusted text size for mobile */}
+                <div className="text-xs md:text-sm text-blue-100">
+                  Response Time
+                </div>{" "}
+                {/* Adjusted text size for mobile */}
               </div>
             </motion.div>
 
@@ -186,10 +201,17 @@ export default function HeroSection() {
               variants={itemVariants}
               className="flex items-center justify-center space-x-3 md:space-x-4 bg-white/10 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-lg border border-white/20 text-white" /* Adjusted padding for mobile */
             >
-              <Shield className="h-8 w-8 md:h-10 md:w-10 text-blue-300" /> {/* Adjusted icon size for mobile */}
+              <Shield className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
+              {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold text-lg md:text-xl">Fully Insured</div> {/* Adjusted text size for mobile */}
-                <div className="text-xs md:text-sm text-blue-100">Licensed & Bonded</div> {/* Adjusted text size for mobile */}
+                <div className="font-semibold text-lg md:text-xl">
+                  Fully Insured
+                </div>{" "}
+                {/* Adjusted text size for mobile */}
+                <div className="text-xs md:text-sm text-blue-100">
+                  Licensed & Bonded
+                </div>{" "}
+                {/* Adjusted text size for mobile */}
               </div>
             </motion.div>
 
@@ -197,16 +219,22 @@ export default function HeroSection() {
               variants={itemVariants}
               className="flex items-center justify-center space-x-3 md:space-x-4 bg-white/10 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-lg border border-white/20 text-white" /* Adjusted padding for mobile */
             >
-              <Zap className="h-8 w-8 md:h-10 md:w-10 text-blue-300" /> {/* Adjusted icon size for mobile */}
+              <Zap className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
+              {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold text-lg md:text-xl">24/7 Available</div> {/* Adjusted text size for mobile */}
-                <div className="text-xs md:text-sm text-blue-100">Always Ready</div> {/* Adjusted text size for mobile */}
+                <div className="font-semibold text-lg md:text-xl">
+                  24/7 Available
+                </div>{" "}
+                {/* Adjusted text size for mobile */}
+                <div className="text-xs md:text-sm text-blue-100">
+                  Always Ready
+                </div>{" "}
+                {/* Adjusted text size for mobile */}
               </div>
             </motion.div>
           </motion.div>
         </motion.div>
       </div>
-
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
