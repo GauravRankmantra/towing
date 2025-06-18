@@ -166,8 +166,8 @@ export default function Footer() {
       <div className="border-t border-gray-800 py-3">
         <p className="text-center font-[500]">
           {" "}
-          © 2025. All rights reserved. | Powered by{" "}
-          <span className="text-[#D83030] font-[600]">Rank</span>mantra
+          © 2025. All rights reserved.
+          {/* <span className="text-[#D83030] font-[600]">Rank</span>mantra */}
         </p>
       </div>
     </footer>

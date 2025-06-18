@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock, Phone } from "lucide-react";
 import Link from "next/link";
+import { BoxReveal } from "@/components/magicui/box-reveal";
 
 export default function ServiceArea() {
   const coverageAreas = [
@@ -15,7 +16,7 @@ export default function ServiceArea() {
   ];
 
   return (
-    <section className="relative z-0 py-24 bg-white overflow-hidden">
+    <section className="relative z-0 py-5 bg-white overflow-hidden">
       {/* Decorative blurred shape */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-20 -left-20 w-96 h-96 bg-blue-100 rounded-full blur-[120px] opacity-40"></div>
@@ -25,39 +26,45 @@ export default function ServiceArea() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           {/* Left: Text Content */}
+
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-              Serving Your Area <span className="text-blue-600">24/7</span>
-            </h2>
+            <BoxReveal duration={0.5}>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Serving Your Area <span className="text-blue-600">24/<span className="text-red-500">7</span></span>
+              </h2>
+            </BoxReveal>
 
-            <p className="text-lg text-gray-600 mb-6">
-              Our extensive service area covers the entire metro region with
-              strategically located dispatch centers to ensure rapid response
-              times.
-            </p>
+            <BoxReveal duration={1}>
+              <p className="text-lg text-gray-600 mb-6">
+                Our extensive service area covers the entire metro region with
+                strategically located dispatch centers to ensure rapid response
+                times.
+              </p>
+            </BoxReveal>
 
-            {/* Locations */}
-            <div className="grid grid-cols-2 gap-3 mb-8">
-              {coverageAreas.map((area, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-center px-3 py-2 rounded-md bg-blue-50 text-blue-800 text-sm font-medium shadow-sm hover:bg-blue-100 transition"
-                >
-                  <MapPin className="h-4 w-4 mr-2" />
-                  {area}
-                </motion.div>
-              ))}
-            </div>
-
+            <BoxReveal duration={0.8}>
+              {/* Locations */}
+              <div className="grid grid-cols-2 gap-3 mb-8">
+                {coverageAreas.map((area, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-center px-3 py-2 rounded-md bg-blue-50 text-blue-800 text-sm font-medium shadow-sm hover:bg-blue-100 transition"
+                  >
+                    <MapPin className="h-4 w-4 mr-2" />
+                    {area}
+                  </motion.div>
+                ))}
+              </div>
+            </BoxReveal>
             {/* Info Box */}
             <div className="bg-white/60 backdrop-blur-lg border border-gray-200 rounded-xl p-6 shadow-md mb-8">
               <div className="flex items-center gap-4 mb-3">
