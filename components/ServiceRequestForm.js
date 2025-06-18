@@ -1,55 +1,64 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useForm } from 'react-hook-form';
-import { toast } from 'react-hot-toast';
-import { Phone, MapPin, Car, FileText, Upload, User, Mail } from 'lucide-react';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+import { Phone, MapPin, Car, FileText, Upload, User, Mail } from "lucide-react";
 
 export default function ServiceRequestForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      toast.success('Service request submitted successfully! We\'ll contact you within 5 minutes.');
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      toast.success(
+        "Service request submitted successfully! We'll contact you within 5 minutes."
+      );
       reset();
     } catch (error) {
-      toast.error('Failed to submit request. Please try again or call us directly.');
+      toast.error(
+        "Failed to submit request. Please try again or call us directly."
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const serviceTypes = [
-    'Light Duty Towing',
-    'Medium Duty Towing',
-    'Heavy Duty Towing',
-    'Roadside Assistance',
-    'Long Distance Towing',
-    'Lockout Service',
-    'Fuel Delivery',
-    'Tire Change',
-    'Jump Start',
-    'Other',
+    "Light Duty Towing",
+    "Medium Duty Towing",
+    "Heavy Duty Towing",
+    "Roadside Assistance",
+    "Long Distance Towing",
+    "Lockout Service",
+    "Fuel Delivery",
+    "Tire Change",
+    "Jump Start",
+    "Other",
   ];
 
   const vehicleTypes = [
-    'Car/Sedan',
-    'SUV',
-    'Pickup Truck',
-    'Van',
-    'Motorcycle',
-    'RV/Motorhome',
-    'Box Truck',
-    'Semi-Truck',
-    'Bus',
-    'Other',
+    "Car/Sedan",
+    "SUV",
+    "Pickup Truck",
+    "Van",
+    "Motorcycle",
+    "RV/Motorhome",
+    "Box Truck",
+    "Semi-Truck",
+    "Bus",
+    "Other",
   ];
 
   return (
@@ -69,7 +78,7 @@ export default function ServiceRequestForm() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Service Request Form
                 </h2>
-                
+
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Name */}
@@ -80,12 +89,14 @@ export default function ServiceRequestForm() {
                       </label>
                       <input
                         type="text"
-                        {...register('name', { required: 'Name is required' })}
+                        {...register("name", { required: "Name is required" })}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="Your full name"
                       />
                       {errors.name && (
-                        <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.name.message}
+                        </p>
                       )}
                     </div>
 
@@ -97,12 +108,16 @@ export default function ServiceRequestForm() {
                       </label>
                       <input
                         type="tel"
-                        {...register('phone', { required: 'Phone number is required' })}
+                        {...register("phone", {
+                          required: "Phone number is required",
+                        })}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="(555) 123-4567"
                       />
                       {errors.phone && (
-                        <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.phone.message}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -115,7 +130,7 @@ export default function ServiceRequestForm() {
                     </label>
                     <input
                       type="email"
-                      {...register('email')}
+                      {...register("email")}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       placeholder="your.email@example.com"
                     />
@@ -129,12 +144,16 @@ export default function ServiceRequestForm() {
                     </label>
                     <input
                       type="text"
-                      {...register('location', { required: 'Location is required' })}
+                      {...register("location", {
+                        required: "Location is required",
+                      })}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       placeholder="Street address or nearest intersection"
                     />
                     {errors.location && (
-                      <p className="mt-1 text-sm text-red-600">{errors.location.message}</p>
+                      <p className="mt-1 text-sm text-red-600">
+                        {errors.location.message}
+                      </p>
                     )}
                   </div>
 
@@ -146,16 +165,22 @@ export default function ServiceRequestForm() {
                         <span>Service Needed *</span>
                       </label>
                       <select
-                        {...register('serviceType', { required: 'Service type is required' })}
+                        {...register("serviceType", {
+                          required: "Service type is required",
+                        })}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       >
                         <option value="">Select service type</option>
                         {serviceTypes.map((type) => (
-                          <option key={type} value={type}>{type}</option>
+                          <option key={type} value={type}>
+                            {type}
+                          </option>
                         ))}
                       </select>
                       {errors.serviceType && (
-                        <p className="mt-1 text-sm text-red-600">{errors.serviceType.message}</p>
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.serviceType.message}
+                        </p>
                       )}
                     </div>
 
@@ -166,16 +191,22 @@ export default function ServiceRequestForm() {
                         <span>Vehicle Type *</span>
                       </label>
                       <select
-                        {...register('vehicleType', { required: 'Vehicle type is required' })}
+                        {...register("vehicleType", {
+                          required: "Vehicle type is required",
+                        })}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       >
                         <option value="">Select vehicle type</option>
                         {vehicleTypes.map((type) => (
-                          <option key={type} value={type}>{type}</option>
+                          <option key={type} value={type}>
+                            {type}
+                          </option>
                         ))}
                       </select>
                       {errors.vehicleType && (
-                        <p className="mt-1 text-sm text-red-600">{errors.vehicleType.message}</p>
+                        <p className="mt-1 text-sm text-red-600">
+                          {errors.vehicleType.message}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -187,7 +218,7 @@ export default function ServiceRequestForm() {
                       <span>Description of Issue</span>
                     </label>
                     <textarea
-                      {...register('description')}
+                      {...register("description")}
                       rows={4}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       placeholder="Please describe the issue and any relevant details..."
@@ -203,11 +234,12 @@ export default function ServiceRequestForm() {
                     <input
                       type="file"
                       accept="image/*"
-                      {...register('photo')}
+                      {...register("photo")}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     />
                     <p className="mt-1 text-xs text-gray-500">
-                      Upload a photo of your vehicle or situation to help us prepare
+                      Upload a photo of your vehicle or situation to help us
+                      prepare
                     </p>
                   </div>
 
@@ -221,16 +253,22 @@ export default function ServiceRequestForm() {
                         <input
                           type="radio"
                           value="call"
-                          {...register('contactMethod', { required: 'Please select a contact method' })}
+                          {...register("contactMethod", {
+                            required: "Please select a contact method",
+                          })}
                           className="text-blue-600 focus:ring-blue-500"
                         />
-                        <span className="text-sm text-gray-700">Call me back</span>
+                        <span className="text-sm text-gray-700">
+                          Call me back
+                        </span>
                       </label>
                       <label className="flex items-center space-x-2">
                         <input
                           type="radio"
                           value="text"
-                          {...register('contactMethod', { required: 'Please select a contact method' })}
+                          {...register("contactMethod", {
+                            required: "Please select a contact method",
+                          })}
                           className="text-blue-600 focus:ring-blue-500"
                         />
                         <span className="text-sm text-gray-700">Send SMS</span>
@@ -239,14 +277,18 @@ export default function ServiceRequestForm() {
                         <input
                           type="radio"
                           value="email"
-                          {...register('contactMethod', { required: 'Please select a contact method' })}
+                          {...register("contactMethod", {
+                            required: "Please select a contact method",
+                          })}
                           className="text-blue-600 focus:ring-blue-500"
                         />
                         <span className="text-sm text-gray-700">Email me</span>
                       </label>
                     </div>
                     {errors.contactMethod && (
-                      <p className="mt-1 text-sm text-red-600">{errors.contactMethod.message}</p>
+                      <p className="mt-1 text-sm text-red-600">
+                        {errors.contactMethod.message}
+                      </p>
                     )}
                   </div>
 
@@ -256,7 +298,9 @@ export default function ServiceRequestForm() {
                     disabled={isSubmitting}
                     className="w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 disabled:bg-blue-400 transition-colors font-semibold text-lg"
                   >
-                    {isSubmitting ? 'Submitting Request...' : 'Submit Service Request'}
+                    {isSubmitting
+                      ? "Submitting Request..."
+                      : "Submit Service Request"}
                   </button>
                 </form>
               </div>
@@ -272,9 +316,12 @@ export default function ServiceRequestForm() {
             >
               {/* Emergency Contact */}
               <div className="bg-red-50 border-l-4 border-red-500 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-red-900 mb-4">Emergency?</h3>
+                <h3 className="text-lg font-semibold text-red-900 mb-4">
+                  Emergency?
+                </h3>
                 <p className="text-red-700 mb-4">
-                  If this is an emergency, please call us directly for immediate assistance.
+                  If this is an emergency, please call us directly for immediate
+                  assistance.
                 </p>
                 <a
                   href="tel:+15551234567"
@@ -287,33 +334,49 @@ export default function ServiceRequestForm() {
 
               {/* What to Expect */}
               <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">What to Expect</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  What to Expect
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-blue-600 font-semibold text-sm">1</span>
+                      <span className="text-blue-600 font-semibold text-sm">
+                        1
+                      </span>
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-900">Instant Confirmation</h4>
-                      <p className="text-sm text-gray-600">We'll confirm your request within 2-5 minutes</p>
+                      <h4 className="font-medium text-gray-900">
+                        Instant Confirmation
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        We'll confirm your request within 2-5 minutes
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-blue-600 font-semibold text-sm">2</span>
+                      <span className="text-blue-600 font-semibold text-sm">
+                        2
+                      </span>
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Dispatch</h4>
-                      <p className="text-sm text-gray-600">Nearest available truck is dispatched to your location</p>
+                      <p className="text-sm text-gray-600">
+                        Nearest available truck is dispatched to your location
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-blue-600 font-semibold text-sm">3</span>
+                      <span className="text-blue-600 font-semibold text-sm">
+                        3
+                      </span>
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">Arrival</h4>
-                      <p className="text-sm text-gray-600">Professional service typically within 15-30 minutes</p>
+                      <p className="text-sm text-gray-600">
+                        Professional service typically within 15-30 minutes
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -321,23 +384,33 @@ export default function ServiceRequestForm() {
 
               {/* Contact Info */}
               <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Information</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Contact Information
+                </h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-blue-600" />
-                    <a href="tel:+15551234567" className="text-blue-600 hover:text-blue-800 font-medium">
+                    <a
+                      href="tel:+15551234567"
+                      className="text-blue-600 hover:text-blue-800 font-medium"
+                    >
                       (555) 123-TOWS
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-blue-600" />
-                    <a href="mailto:dispatch@elitetowing.com" className="text-blue-600 hover:text-blue-800 font-medium">
-                      dispatch@elitetowing.com
+                    <a
+                      href="mailto:dispatch@SpaceTimetowing.com"
+                      className="text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      dispatch@SpaceTimetowing.com
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5 text-blue-600" />
-                    <span className="text-gray-600">24/7 Service Area Wide</span>
+                    <span className="text-gray-600">
+                      24/7 Service Area Wide
+                    </span>
                   </div>
                 </div>
               </div>

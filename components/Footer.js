@@ -141,7 +141,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
                 <a
-                  href="mailto:info@elitetowing.com"
+                  href="mailto:info@SpaceTimetowing.com"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
                   Tech@SpaceTimeNews.news

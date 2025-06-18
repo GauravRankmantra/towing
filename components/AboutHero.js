@@ -34,10 +34,10 @@ export default function AboutHero() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Elite Towing
+              About SpaceTime Towing
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              For over 15 years, Elite Towing has been the trusted name in
+              For over 15 years, SpaceTime Towing has been the trusted name in
               professional towing and roadside assistance services. We're a
               family-owned business committed to providing reliable, fast, and
               affordable solutions when you need them most.
