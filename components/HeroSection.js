@@ -1,4 +1,4 @@
-"use client"; // This directive is necessary for client-side features like Framer Motion
+"use client";
 
 import { motion } from "framer-motion";
 import { Phone, MessageSquare, Clock, Shield, Zap } from "lucide-react";
@@ -8,13 +8,12 @@ import { Phone, MessageSquare, Clock, Shield, Zap } from "lucide-react";
 // import img2 from "../Assets/hero/2.jpg";
 // import img3 from "../Assets/hero/3.jpg";
 // import img4 from "../Assets/hero/4.jpg";
-
 // Placeholder URLs for demonstration purposes.
 // Replace these with your actual image paths in a real Next.js project.
 const backgroundImages = [
   "https://images.unsplash.com/photo-1655220711988-430a51a5c254?q=80&w=1448&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1557305089-5da8109b753b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
- 
+
   "https://images.unsplash.com/photo-1675092910167-13382da372e6?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
@@ -135,8 +134,10 @@ export default function HeroSection() {
 
           <motion.p
             style={{
-              textShadow: "2px 2px 4px rgba(0,0,0,1)",
-            }} 
+
+              textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+            }}
+
             variants={itemVariants}
             className="flex  text-base md:text-xl py-2 text-white mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow-md" /* Adjusted text size for better mobile fit */
           >

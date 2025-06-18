@@ -1,50 +1,59 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram } from 'lucide-react';
+import { motion } from "framer-motion";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Facebook,
+  Twitter,
+  Instagram,
+} from "lucide-react";
 
 export default function ContactInfo() {
   const contactMethods = [
     {
       icon: Phone,
-      title: 'Emergency Hotline',
-      description: 'Available 24/7 for emergency towing and roadside assistance',
-      value: '(555) 123-TOWS',
-      action: 'tel:+15551234567',
-      color: 'text-red-600',
-      bgColor: 'bg-red-50',
+      title: "Emergency Hotline",
+      description:
+        "Available 24/7 for emergency towing and roadside assistance",
+      value: "1234567",
+      action: "tel:+1234567",
+      color: "text-red-600",
+      bgColor: "bg-red-50",
     },
     {
       icon: Mail,
-      title: 'Email Us',
-      description: 'General inquiries and non-emergency requests',
-      value: 'info@elitetowing.com',
-      action: 'mailto:info@elitetowing.com',
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
+      title: "Email Us",
+      description: "General inquiries and non-emergency requests",
+      value: "Tech@SpaceTimeNews.news",
+      action: "mailto:Tech@SpaceTimeNews.news",
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
     },
     {
       icon: MapPin,
-      title: 'Visit Our Office',
-      description: 'Main office and dispatch center',
-      value: '123 Towing Ave, Metro City, ST 12345',
-      action: 'https://maps.google.com',
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
+      title: "Visit Our Office",
+      description: "Main office and dispatch center",
+      value: "1829 Pearl St Houston, TX 77029",
+      action: "https://maps.google.com",
+      color: "text-green-600",
+      bgColor: "bg-green-50",
     },
   ];
 
   const businessHours = [
-    { day: 'Emergency Services', hours: '24/7' },
-    { day: 'Office Hours', hours: 'Mon-Fri: 8:00 AM - 6:00 PM' },
-    { day: 'Weekend Office', hours: 'Sat-Sun: 9:00 AM - 5:00 PM' },
+    { day: "Emergency Services", hours: "24/7" },
+    { day: "Office Hours", hours: "Mon-Fri: 8:00 AM - 6:00 PM" },
+    { day: "Weekend Office", hours: "Sat-Sun: 9:00 AM - 5:00 PM" },
   ];
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
+      transition={{ duration: 0.8 }}
       viewport={{ once: true }}
       className="space-y-8"
     >
@@ -53,14 +62,16 @@ export default function ContactInfo() {
         {contactMethods.map((method, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className={`${method.bgColor} rounde-xl p-6 hover:shadow-lg transition-shadow`}
+            className={`${method.bgColor} rounded-xl p-6 hover:shadow-lg transition-shadow`}
           >
             <div className="flex items-start space-x-4">
-              <div className={`flex items-center justify-center w-12 h-12 ${method.color} bg-white rounded-full`}>
+              <div
+                className={`flex items-center justify-center w-12 h-12 ${method.color} bg-white rounded-full`}
+              >
                 <method.icon className="h-6 w-6" />
               </div>
               <div className="flex-1">
@@ -83,10 +94,18 @@ export default function ContactInfo() {
       </div>
 
       {/* Business Hours */}
-      <div className="bg-gray-50 rounded-xl p-6">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="bg-gray-50 rounded-xl p-6"
+      >
         <div className="flex items-center space-x-3 mb-4">
           <Clock className="h-6 w-6 text-blue-600" />
-          <h3 className="text-lg font-semibold text-gray-900">Business Hours</h3>
+          <h3 className="text-lg font-semibold text-gray-900">
+            Business Hours
+          </h3>
         </div>
         <div className="space-y-3">
           {businessHours.map((schedule, index) => (
@@ -96,17 +115,23 @@ export default function ContactInfo() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* Map Embed */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        viewport={{ once: true }}
+        className="bg-white rounded-xl overflow-hidden shadow-lg"
+      >
         <div className="aspect-video bg-gray-200 relative">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.123456789!2d-74.0059413!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMjEuNCJX!5e0!3m2!1sen!2sus!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.949536641391!2d-73.98981922444304!3d40.748817835720105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af18f1e7f3%3A0x460be3df2030a73c!2sEmpire%20State%20Building!5e0!3m2!1sen!2sin!4v1718618569301!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowFullScreen=""
+            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Elite Towing Location"
@@ -115,13 +140,20 @@ export default function ContactInfo() {
         <div className="p-4">
           <h4 className="font-semibold text-gray-900 mb-2">Find Us Here</h4>
           <p className="text-gray-600 text-sm">
-            Our main office and dispatch center is conveniently located in the heart of Metro City.
+            Our main office and dispatch center is conveniently located in the
+            heart of Metro City.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Social Media */}
-      <div className="bg-white rounded-xl p-6 shadow-lg">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="bg-white rounded-xl p-6 shadow-lg"
+      >
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
         <div className="flex space-x-4">
           <a
@@ -146,7 +178,7 @@ export default function ContactInfo() {
         <p className="text-gray-600 text-sm mt-4">
           Stay updated with our latest news and service updates on social media.
         </p>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
