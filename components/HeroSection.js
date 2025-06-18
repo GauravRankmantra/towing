@@ -1,4 +1,4 @@
-"use client"; // This directive is necessary for client-side features like Framer Motion
+"use client";
 
 import { motion } from "framer-motion";
 import { Phone, MessageSquare, Clock, Shield, Zap } from "lucide-react";
@@ -8,7 +8,6 @@ import { Phone, MessageSquare, Clock, Shield, Zap } from "lucide-react";
 // import img2 from "../Assets/hero/2.jpg";
 // import img3 from "../Assets/hero/3.jpg";
 // import img4 from "../Assets/hero/4.jpg";
-
 // Placeholder URLs for demonstration purposes.
 // Replace these with your actual image paths in a real Next.js project.
 const backgroundImages = [
