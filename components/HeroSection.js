@@ -134,8 +134,10 @@ export default function HeroSection() {
 
           <motion.p
             style={{
-              textShadow: "2px 2px 4px rgba(0,0,0,1)",
-            }} 
+
+              textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+            }}
+
             variants={itemVariants}
             className="flex  text-base md:text-xl py-2 text-white mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow-md" /* Adjusted text size for better mobile fit */
           >
