@@ -19,6 +19,8 @@
 @keyframes scrollRight {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(0); }
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 :root {
   --foreground-rgb: 0, 0, 0;
