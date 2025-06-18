@@ -5,7 +5,7 @@ import { Phone } from "lucide-react";
 
 export default function ServicesHero() {
   return (
-    <section className="pt-20 pb-16 bg-gradient-to-br from-blue-900 to-blue-800">
+    <section className="pt-32 pb-16 bg-gradient-to-br from-blue-900 to-blue-800">
       <div className="container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

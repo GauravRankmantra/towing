@@ -5,7 +5,7 @@ import { MapPin, Clock } from 'lucide-react';
 
 export default function ServiceAreaHero() {
   return (
-    <section className="pt-20 pb-16 bg-gradient-to-br from-blue-900 to-blue-800">
+    <section className="pt-32 pb-16 bg-gradient-to-br from-blue-900 to-blue-800">
       <div className="container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,7 +27,7 @@ export default function ServiceAreaHero() {
             <div className="flex items-center justify-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4">
               <MapPin className="h-6 w-6 text-blue-300" />
               <div className="text-left">
-                <div className="text-lg font-semibold text-white">6 Counties Covered</div>
+                <div className="text-lg font-semibold text-white">6 States Covered</div>
                 <div className="text-sm text-blue-200">Comprehensive Coverage</div>
               </div>
             </div>

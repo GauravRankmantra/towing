@@ -23,17 +23,13 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/", label: "About" },
-    { href: "/", label: "Services" },
-    { href: "/", label: "Service Area" },
-    { href: "/", label: "Contact" },
-  ];
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/service-area', label: 'Service Area' },
+  { href: '/contact', label: 'Contact' },
 
-  // { href: '/about', label: 'About' },
-  // { href: '/services', label: 'Services' },
-  // { href: '/service-area', label: 'Service Area' },
-  // { href: '/contact', label: 'Contact' },
+  ];
 
   return (
     <motion.nav
@@ -42,7 +38,7 @@ export default function Navigation() {
       className={`fixed top-0 w-full font-semibold text-lg z-50 transition-all duration-300 py-3 ${
         scrolled
           ? "bg-white shadow-lg"
-          : " backdrop-blur-sm bg-white/10 text-white border-b border-gray-500"
+          : " backdrop-blur bg-white/10 text-white border-b border-gray-500"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -66,7 +62,7 @@ export default function Navigation() {
                 // className={`text-lg font-medium transition-colors hover:text-blue-800 ${
                 //   pathname === item.href ? "text-black" : "text-gray-700"
                 // }`}
-                className={`text-lg font-medium transition-colors hover:text-blue-800`}
+                className={`text-lg font-medium transition-colors hover:text-red-700`}
               >
                 {item.label}
               </Link>
@@ -84,7 +80,7 @@ export default function Navigation() {
             </Link> */}
             <a
               href="tel:+15551234567"
-              className="flex items-center space-x-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm font-medium"
+              className="flex items-center space-x-2 bg-red-600 text-white px-4 py-4 rounded-lg hover:bg-red-700 transition-colors text-sm font-medium"
             >
               <Phone className="h-4 w-4" />
               <span>Call Now</span>

@@ -5,6 +5,7 @@ import ServiceArea from "@/components/ServiceArea";
 import Testimonials from "@/components/Testimonials";
 import ContactBar from "@/components/ContactBar";
 import Footer from "@/components/Footer";
+import TestimonialSection from "../components/TestimonialSection";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <HeroSection />
       <ServicesOverview />
       <ServiceArea />
-      <Testimonials />
+      <TestimonialSection />
       <ContactBar />
       <Footer />
     </main>
