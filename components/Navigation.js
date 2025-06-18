@@ -35,7 +35,7 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 w-full font-semibold text-lg z-50 transition-all duration-300 py-3 ${
+      className={`fixed top-0  w-full font-semibold text-lg z-50 transition-all duration-300 py-3 ${
         scrolled
           ? "bg-white shadow-lg"
           : " backdrop-blur bg-white/10 text-white border-b border-gray-500"

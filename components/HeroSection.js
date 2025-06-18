@@ -124,7 +124,7 @@ export default function HeroSection() {
             variants={itemVariants}
             className="text-5xl mt-6 md:mt-0 md:text-8xl font-extrabold text-white leading-tight mb-4 md:mb-6 drop-shadow-lg" /* Existing drop-shadow-lg */
             style={{
-              textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
             }} /* Added custom text-shadow */
           >
             24/
@@ -134,10 +134,10 @@ export default function HeroSection() {
 
           <motion.p
             style={{
-              textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
-            }}
+              textShadow: "2px 2px 4px rgba(0,0,0,1)",
+            }} 
             variants={itemVariants}
-            className="flex md:hidden text-base md:text-xl text-white mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow-md" /* Adjusted text size for better mobile fit */
+            className="flex  text-base md:text-xl py-2 text-white mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow-md" /* Adjusted text size for better mobile fit */
           >
             Fast, reliable, and professional towing services when you need them
             most. Licensed, insured, and ready to help.
@@ -181,23 +181,24 @@ export default function HeroSection() {
 
           {/* Trust Indicators */}
           <motion.div
+          style={{marginTop:"100px"}}
             initial="hidden"
             animate="visible"
             variants={containerVariants} // Stagger indicators
-            className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto" /* Adjusted gap for mobile */
+            className="grid grid-cols-2  md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto" /* Adjusted gap for mobile */
           >
             <motion.div
               variants={itemVariants}
-              className="flex items-center justify-center space-x-3 md:space-x-4 bg-white/10 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-lg border border-white/20 text-white" /* Adjusted padding for mobile */
+              className="flex items-center justify-center space-x-2 md:space-x-4 bg-white/10 backdrop-blur-sm p-2 md:p-6 rounded-xl shadow-lg border border-white/20 text-white" /* Adjusted padding for mobile */
             >
               <Clock className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
               {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold text-lg md:text-xl">
+                <div className="font-semibold  md:text-xl">
                   15-30 Min
                 </div>{" "}
                 {/* Adjusted text size for mobile */}
-                <div className="text-xs md:text-sm text-blue-100">
+                <div className="text-[0.60rem] md:text-sm text-blue-100">
                   Response Time
                 </div>{" "}
                 {/* Adjusted text size for mobile */}
@@ -206,16 +207,16 @@ export default function HeroSection() {
 
             <motion.div
               variants={itemVariants}
-              className="flex items-center justify-center space-x-3 md:space-x-4 bg-white/10 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-lg border border-white/20 text-white" /* Adjusted padding for mobile */
+              className="flex items-center justify-center space-x-2 md:space-x-4 bg-white/10 backdrop-blur-sm p-2 md:p-6 rounded-xl shadow-lg border border-white/20 text-white" /* Adjusted padding for mobile */
             >
               <Shield className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
               {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold text-lg md:text-xl">
+                <div className="font-semibold md:text-xl">
                   Fully Insured
                 </div>{" "}
                 {/* Adjusted text size for mobile */}
-                <div className="text-xs md:text-sm text-blue-100">
+                <div className="text-[0.60rem] md:text-sm text-blue-100">
                   Licensed & Bonded
                 </div>{" "}
                 {/* Adjusted text size for mobile */}
@@ -224,16 +225,16 @@ export default function HeroSection() {
 
             <motion.div
               variants={itemVariants}
-              className="flex col-span-2 md:col-span-1 items-center justify-center space-x-3 md:space-x-4 bg-white/10 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-lg border border-white/20 text-white" /* Adjusted padding for mobile */
+              className="flex col-span-2 md:col-span-1 items-center justify-center space-x-3 md:space-x-4 bg-white/10 backdrop-blur-sm p-2 md:p-6 rounded-xl shadow-lg border border-white/20 text-white" /* Adjusted padding for mobile */
             >
               <Zap className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
               {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold text-lg md:text-xl">
+                <div className="font-semibold  md:text-xl">
                   24/7 Available
                 </div>{" "}
                 {/* Adjusted text size for mobile */}
-                <div className="text-xs md:text-sm text-blue-100">
+                <div className="text-[0.60rem] md:text-sm text-blue-100">
                   Always Ready
                 </div>{" "}
                 {/* Adjusted text size for mobile */}
