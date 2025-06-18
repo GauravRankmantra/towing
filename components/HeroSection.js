@@ -19,13 +19,13 @@ const backgroundImages = [
 ];
 
 export default function HeroSection() {
+  // Animation variants for staggered text and elements
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.2, // Stagger children animations by 0.2 seconds
-        delayChildren: 0.3, // Delay the start of children animations
         delayChildren: 0.3, // Delay the start of children animations
       },
     },
@@ -84,9 +84,6 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
       {/* Background Image Sections (visible on medium screens and up) */}
-      <div className="absolute inset-0 hidden md:flex z-0">
-        {" "}
-        {/* hidden on small, flex on md and up */}
       <div className="absolute inset-0 hidden md:flex z-0">
         {" "}
         {/* hidden on small, flex on md and up */}
@@ -159,15 +156,9 @@ export default function HeroSection() {
                 scale: 1.05,
                 boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
               }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-              }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center space-x-3 bg-blue-600 text-white px-6 py-3 rounded-full transition-all duration-300 ease-in-out text-base font-semibold shadow-xl" /* Adjusted padding/text size for mobile */
             >
-              <Phone className="h-5 w-5" />{" "}
-              {/* Adjusted icon size for mobile */}
               <Phone className="h-5 w-5" />{" "}
               {/* Adjusted icon size for mobile */}
               <span>Call Now : 1234567</span>
@@ -180,15 +171,9 @@ export default function HeroSection() {
                 scale: 1.05,
                 boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
               }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-              }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center space-x-3 bg-transparent border-2 border-red-500 text-red-50 px-6 py-3 rounded-full hover:bg-red-500 hover:border-red-500 hover:text-white transition-all duration-300 ease-in-out text-base font-semibold shadow-xl" /* Adjusted padding/text size for mobile */
             >
-              <MessageSquare className="h-5 w-5" />{" "}
-              {/* Adjusted icon size for mobile */}
               <MessageSquare className="h-5 w-5" />{" "}
               {/* Adjusted icon size for mobile */}
               <span>Request Service</span>
@@ -208,17 +193,7 @@ export default function HeroSection() {
             >
               <Clock className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
               {/* Adjusted icon size for mobile */}
-              <Clock className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
-              {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold text-lg md:text-xl">
-                  15-30 Min
-                </div>{" "}
-                {/* Adjusted text size for mobile */}
-                <div className="text-xs md:text-sm text-blue-100">
-                  Response Time
-                </div>{" "}
-                {/* Adjusted text size for mobile */}
                 <div className="font-semibold text-lg md:text-xl">
                   15-30 Min
                 </div>{" "}
@@ -236,17 +211,7 @@ export default function HeroSection() {
             >
               <Shield className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
               {/* Adjusted icon size for mobile */}
-              <Shield className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
-              {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold text-lg md:text-xl">
-                  Fully Insured
-                </div>{" "}
-                {/* Adjusted text size for mobile */}
-                <div className="text-xs md:text-sm text-blue-100">
-                  Licensed & Bonded
-                </div>{" "}
-                {/* Adjusted text size for mobile */}
                 <div className="font-semibold text-lg md:text-xl">
                   Fully Insured
                 </div>{" "}
@@ -264,17 +229,7 @@ export default function HeroSection() {
             >
               <Zap className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
               {/* Adjusted icon size for mobile */}
-              <Zap className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
-              {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold text-lg md:text-xl">
-                  24/7 Available
-                </div>{" "}
-                {/* Adjusted text size for mobile */}
-                <div className="text-xs md:text-sm text-blue-100">
-                  Always Ready
-                </div>{" "}
-                {/* Adjusted text size for mobile */}
                 <div className="font-semibold text-lg md:text-xl">
                   24/7 Available
                 </div>{" "}
