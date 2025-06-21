@@ -192,7 +192,7 @@ const CarousSpaceTimem = React.forwardRef<
     />
   );
 });
-CarousSpaceTimem.displayName = "CarousSpaceTimem";
+CarousSpaceTimem.displayName = 'CarousSpaceTimem';
 
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,

@@ -27,13 +27,11 @@ export default function ServiceAreaHero() {
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Service Area
-            <span className="text-red-700 block">& </span>Coverage
+            <span className="text-red-700 block">& Coverage</span>
           </h1>
 
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            We provide comprehensive towing and roadside assistance across the
-            entire metropolitan region with strategically located dispatch
-            centers for the fastest response times.
+          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
+            At <strong>SpaceTime Towing & Recovery, LLC</strong>, we proudly serve drivers across the Greater Houston area and beyond, providing fast, reliable roadside assistance and towing services for both light- and heavy-duty vehicles.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
@@ -41,10 +39,10 @@ export default function ServiceAreaHero() {
               <MapPin className="h-6 w-6 text-blue-300" />
               <div className="text-left">
                 <div className="text-lg font-semibold text-white">
-                  6 States Covered
+                  Greater Houston
                 </div>
                 <div className="text-sm text-blue-200">
-                  Comprehensive Coverage
+                  Local & Regional Reach
                 </div>
               </div>
             </div>
@@ -52,10 +50,10 @@ export default function ServiceAreaHero() {
               <Clock className="h-6 w-6 text-blue-300" />
               <div className="text-left">
                 <div className="text-lg font-semibold text-white">
-                  15-30 Minutes
+                  24/7 Dispatch
                 </div>
                 <div className="text-sm text-blue-200">
-                  Average Response Time
+                  Fast Response Anytime
                 </div>
               </div>
             </div>

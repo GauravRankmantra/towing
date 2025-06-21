@@ -20,13 +20,8 @@ export default function Footer() {
     { href: "/", label: "Services" },
     { href: "/", label: "Service Area" },
     { href: "/", label: "Contact" },
+    { href: "/termsandconditions", label: "Terms & Conditions" },
   ];
-
-  // { href: '/', label: 'Home' },
-  //   { href: '/about', label: 'About Us' },
-  //   { href: '/services', label: 'Services' },
-  //   { href: '/service-area', label: 'Service Area' },
-  //   { href: '/contact', label: 'Contact' },
 
   const services = [
     "Light Duty Towing",

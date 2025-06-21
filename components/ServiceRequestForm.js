@@ -399,10 +399,7 @@ export default function ServiceRequestForm() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-blue-600" />
-                    <a
-                      href="mailto:dispatch@SpaceTimetowing.com"
-                      className="text-blue-600 hover:text-blue-800 font-medium"
-                    >
+                    <a href="mailto:dispatch@SpaceTimetowing.com" className="text-blue-600 hover:text-blue-800 font-medium">
                       dispatch@SpaceTimetowing.com
                     </a>
                   </div>

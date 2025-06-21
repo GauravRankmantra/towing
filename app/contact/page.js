@@ -5,9 +5,8 @@ import ContactForm from "@/components/ContactForm";
 import ContactInfo from "@/components/ContactInfo";
 
 export const metadata = {
-  title: "SpaceTime Towing & Recovery, LLC",
-  description:
-    "Contact SpaceTime Towing Services for all your towing needs. Call us 24/7 at (555) 123-TOWS or fill out our contact form for a quick response.",
+  title: 'SpaceTime Towing & Recovery, LLC',
+  description: 'Contact SpaceTime Towing Services for all your towing needs. Call us 24/7 at (555) 123-TOWS or fill out our contact form for a quick response.',
 };
 
 export default function Contact() {

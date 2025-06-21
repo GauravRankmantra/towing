@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="md:py-20 py-8 bg-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -57,8 +57,9 @@ export default function WhyChooseUs() {
             Why Choose SpaceTime Towing?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            When you need reliable towing services, trust the company that has
-            been serving the community with excellence for over 15 years.
+            Driven by integrity, reliability, and a commitment to excellence,
+            SpaceTime Towing & Recovery is your trusted partner for roadside
+            assistance in Houston and beyond.
           </p>
         </motion.div>
 

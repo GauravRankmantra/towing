@@ -6,37 +6,23 @@ import { Calendar, MapPin, Users, Truck } from "lucide-react";
 export default function CompanyHistory() {
   const timeline = [
     {
-      year: "2009",
+      year: "2024",
       title: "Company Founded",
       description:
-        "SpaceTime Towing started as a small family business with one tow truck and a commitment to excellence.",
+        "Founded in the heart of Houston, SpaceTime Towing set out to deliver dependable, high-quality roadside assistance. With a focus on quick response, professional operators, and modern equipment, we began our journey to bring peace of mind to drivers across the region.",
       icon: Calendar,
     },
     {
-      year: "2012",
-      title: "Fleet Expansion",
+      year: "2025",
+      title: "Trusted by the Community",
       description:
-        "Added heavy-duty towing capabilities and expanded our service area to cover the entire metro region.",
-      icon: Truck,
-    },
-    {
-      year: "2016",
-      title: "Team Growth",
-      description:
-        "Grew to a team of 25+ certified professionals with specialized training in all types of towing.",
+        "In just one year, SpaceTime Towing has built a strong reputation across Houston for its rapid response, courteous service, and reliable roadside support. As we continue to grow, our focus remains on safety, integrity, and customer satisfaction.",
       icon: Users,
-    },
-    {
-      year: "2024",
-      title: "Regional Leader",
-      description:
-        "Now serving 6 counties with 24/7 dispatch and the fastest response times in the industry.",
-      icon: MapPin,
     },
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="md:py-20 py-8 bg-gray-100">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
