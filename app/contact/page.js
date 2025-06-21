@@ -1,8 +1,8 @@
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import ContactHero from '@/components/ContactHero';
-import ContactForm from '@/components/ContactForm';
-import ContactInfo from '@/components/ContactInfo';
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import ContactHero from "@/components/ContactHero";
+import ContactForm from "@/components/ContactForm";
+import ContactInfo from "@/components/ContactInfo";
 
 export const metadata = {
   title: 'SpaceTime Towing & Recovery, LLC',
