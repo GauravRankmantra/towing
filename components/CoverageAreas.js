@@ -1,86 +1,86 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { MapPin, Phone, Clock } from 'lucide-react';
+import { motion } from "framer-motion";
+import { MapPin, Phone, Clock } from "lucide-react";
 
 export default function CoverageAreas() {
   const counties = [
     {
-      name: 'Metro County',
+      name: "Greater Houston",
       cities: [
-        'Downtown Metro',
-        'Midtown District',
-        'Financial District',
-        'Arts Quarter',
-        'University Area',
-        'Harbor District',
+        "Houston (All Wards & Suburbs)",
+        "Katy",
+        "Cypress",
+        "Sugar Land",
+        "Pearland",
+        "Pasadena",
       ],
-      responseTime: '15-25 minutes',
-      trucks: 12,
+      responseTime: "15-25 minutes",
+      trucks: 14,
     },
     {
-      name: 'North County',
+      name: "Northern Coverage",
       cities: [
-        'Northville',
-        'Mountain View',
-        'Pine Hills',
-        'Oakwood',
-        'Riverside',
-        'Forest Glen',
+        "Spring",
+        "Tomball",
+        "The Woodlands",
+        "Humble",
+        "Aldine",
+        "Kingwood",
       ],
-      responseTime: '20-30 minutes',
+      responseTime: "20-30 minutes",
+      trucks: 10,
+    },
+    {
+      name: "Eastern & Coastal Area",
+      cities: [
+        "Baytown",
+        "Deer Park",
+        "Channelview",
+        "La Porte",
+        "Galena Park",
+        "Highlands",
+      ],
+      responseTime: "25-35 minutes",
       trucks: 8,
     },
     {
-      name: 'South County',
+      name: "Southern Belt",
       cities: [
-        'South Bay',
-        'Coastal Heights',
-        'Marina District',
-        'Sunset Beach',
-        'Bay View',
-        'Ocean Park',
+        "Friendswood",
+        "League City",
+        "Alvin",
+        "Manvel",
+        "Clear Lake",
+        "Webster",
       ],
-      responseTime: '20-35 minutes',
+      responseTime: "25-35 minutes",
       trucks: 9,
     },
     {
-      name: 'East Valley',
+      name: "Western Houston",
       cities: [
-        'Valley Center',
-        'Desert Hills',
-        'Canyon View',
-        'Mesa Verde',
-        'Sunrise',
-        'Eagle Rock',
+        "Richmond",
+        "Rosenberg",
+        "Fulshear",
+        "Brookshire",
+        "Simonton",
+        "Mission Bend",
       ],
-      responseTime: '25-40 minutes',
-      trucks: 6,
-    },
-    {
-      name: 'West Hills',
-      cities: [
-        'Westside',
-        'Hill Country',
-        'Malibu Heights',
-        'Beverly Hills',
-        'Topanga',
-        'Pacific Palisades',
-      ],
-      responseTime: '20-35 minutes',
+      responseTime: "25-35 minutes",
       trucks: 7,
     },
     {
-      name: 'Coastal Region',
+      name: "Extended Regional",
       cities: [
-        'Beachside',
-        'Pier District',
-        'Lighthouse Point',
-        'Surf City',
-        'Docklands',
-        'Fisherman\'s Wharf',
+        "Beaumont",
+        "College Station",
+        "Victoria",
+        "Huntsville",
+        "Brenham",
+        "Galveston",
       ],
-      responseTime: '25-40 minutes',
+      responseTime: "30-45 minutes",
       trucks: 5,
     },
   ];
@@ -98,9 +98,9 @@ export default function CoverageAreas() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Detailed Coverage Areas
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We serve all major cities and communities across 6 counties with 
-            dedicated towing services and emergency response teams.
+          <p className="text-sm text-gray-500 mt-6 text-center">
+            Note: Services outside Toll 99 are billed at long-haul rates to
+            maintain fast and fair statewide coverage.
           </p>
         </motion.div>
 
@@ -119,14 +119,21 @@ export default function CoverageAreas() {
                   <MapPin className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">{county.name}</h3>
-                  <p className="text-sm text-gray-600">{county.trucks} trucks available</p>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {county.name}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    {county.trucks} trucks available
+                  </p>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-2 mb-6">
                 {county.cities.map((city, idx) => (
-                  <div key={idx} className="text-sm text-gray-600 flex items-start">
+                  <div
+                    key={idx}
+                    className="text-sm text-gray-600 flex items-start"
+                  >
                     <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-2 flex-shrink-0"></div>
                     {city}
                   </div>
@@ -137,11 +144,15 @@ export default function CoverageAreas() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <Clock className="h-4 w-4 text-green-600" />
-                    <span className="text-sm font-medium text-gray-900">Response Time:</span>
+                    <span className="text-sm font-medium text-gray-900">
+                      Response Time:
+                    </span>
                   </div>
-                  <span className="text-sm font-semibold text-green-600">{county.responseTime}</span>
+                  <span className="text-sm font-semibold text-green-600">
+                    {county.responseTime}
+                  </span>
                 </div>
-                
+
                 <a
                   href="tel:+15551234567"
                   className="flex items-center justify-center space-x-2 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
@@ -164,14 +175,19 @@ export default function CoverageAreas() {
         >
           <div className="flex items-center space-x-3 mb-4">
             <Phone className="h-6 w-6 text-red-600" />
-            <h3 className="text-lg font-semibold text-red-900">Emergency Services</h3>
+            <h3 className="text-lg font-semibold text-red-900">
+              Emergency Services
+            </h3>
           </div>
           <p className="text-red-700 mb-4">
-            If you're experiencing a roadside emergency, don't wait! Call us immediately at 
-            <strong> (555) 123-TOWS</strong> for the fastest response time in your area.
+            If you're experiencing a roadside emergency, don't wait! Call us
+            immediately at
+            <strong> (555) 123-TOWS</strong> for the fastest response time in
+            your area.
           </p>
           <p className="text-sm text-red-600">
-            * Response times may vary based on weather conditions, traffic, and emergency priority.
+            * Response times may vary based on weather conditions, traffic, and
+            emergency priority.
           </p>
         </motion.div>
       </div>

@@ -1,38 +1,28 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Calendar, MapPin, Users, Truck } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Calendar, MapPin, Users, Truck } from "lucide-react";
 
 export default function CompanyHistory() {
   const timeline = [
     {
-      year: '2009',
-      title: 'Company Founded',
-      description: 'Elite Towing started as a small family business with one tow truck and a commitment to excellence.',
+      year: "2024",
+      title: "Company Founded",
+      description:
+        "Founded in the heart of Houston, SpaceTime Towing set out to deliver dependable, high-quality roadside assistance. With a focus on quick response, professional operators, and modern equipment, we began our journey to bring peace of mind to drivers across the region.",
       icon: Calendar,
     },
     {
-      year: '2012',
-      title: 'Fleet Expansion',
-      description: 'Added heavy-duty towing capabilities and expanded our service area to cover the entire metro region.',
-      icon: Truck,
-    },
-    {
-      year: '2016',
-      title: 'Team Growth',
-      description: 'Grew to a team of 25+ certified professionals with specialized training in all types of towing.',
+      year: "2025",
+      title: "Trusted by the Community",
+      description:
+        "In just one year, SpaceTime Towing has built a strong reputation across Houston for its rapid response, courteous service, and reliable roadside support. As we continue to grow, our focus remains on safety, integrity, and customer satisfaction.",
       icon: Users,
-    },
-    {
-      year: '2024',
-      title: 'Regional Leader',
-      description: 'Now serving 6 counties with 24/7 dispatch and the fastest response times in the industry.',
-      icon: MapPin,
     },
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="md:py-20 py-8 bg-gray-100">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -45,8 +35,8 @@ export default function CompanyHistory() {
             Our Journey
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From humble beginnings to becoming the region's most trusted towing service, 
-            our commitment to excellence has never wavered.
+            From humble beginnings to becoming the region's most trusted towing
+            service, our commitment to excellence has never wavered.
           </p>
         </motion.div>
 
@@ -62,19 +52,25 @@ export default function CompanyHistory() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
               className={`relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 ${
-                index % 2 === 0 ? 'md:text-right' : ''
+                index % 2 === 0 ? "md:text-right" : ""
               }`}
             >
               {/* Content */}
-              <div className={`${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+              <div
+                className={`${index % 2 === 0 ? "md:order-1" : "md:order-2"}`}
+              >
                 <div className="bg-gray-50 rounded-xl p-8">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                       <item.icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-blue-600">{item.year}</div>
-                      <div className="text-lg font-semibold text-gray-900">{item.title}</div>
+                      <div className="text-2xl font-bold text-blue-600">
+                        {item.year}
+                      </div>
+                      <div className="text-lg font-semibold text-gray-900">
+                        {item.title}
+                      </div>
                     </div>
                   </div>
                   <p className="text-gray-600">{item.description}</p>
@@ -83,9 +79,13 @@ export default function CompanyHistory() {
 
               {/* Timeline Dot */}
               <div className="hidden md:block absolute left-1/2 top-8 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full z-10"></div>
-              
+
               {/* Spacer for timeline */}
-              <div className={`hidden md:block ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}></div>
+              <div
+                className={`hidden md:block ${
+                  index % 2 === 0 ? "md:order-2" : "md:order-1"
+                }`}
+              ></div>
             </motion.div>
           ))}
         </div>

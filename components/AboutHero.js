@@ -34,13 +34,15 @@ export default function AboutHero() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Elite Towing
+              About SpaceTime Towing
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              For over 15 years, Elite Towing has been the trusted name in
-              professional towing and roadside assistance services. We're a
-              family-owned business committed to providing reliable, fast, and
-              affordable solutions when you need them most.
+              SpaceTime Towing & Recovery, LLC was founded in 2024 in the heart
+              of Houston, Texas, with a clear mission: to deliver dependable,
+              high-quality roadside assistance and towing services to drivers
+              across the region. Born from a passion for helping people when
+              they need it most, we are proud to serve both local communities
+              and regional routes with speed, safety, and professionalism.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a

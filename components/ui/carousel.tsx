@@ -172,7 +172,7 @@ const CarouselContent = React.forwardRef<
 });
 CarouselContent.displayName = 'CarouselContent';
 
-const CarouselItem = React.forwardRef<
+const CarousSpaceTimem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
@@ -192,7 +192,7 @@ const CarouselItem = React.forwardRef<
     />
   );
 });
-CarouselItem.displayName = 'CarouselItem';
+CarousSpaceTimem.displayName = 'CarousSpaceTimem';
 
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
@@ -256,7 +256,7 @@ export {
   type CarouselApi,
   Carousel,
   CarouselContent,
-  CarouselItem,
+  CarousSpaceTimem,
   CarouselPrevious,
   CarouselNext,
 };

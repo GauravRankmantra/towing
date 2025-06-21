@@ -2,89 +2,146 @@
 
 import { motion } from "framer-motion";
 import {
-  Car,
-  Truck,
-  Users,
-  Wrench,
-  MapPin,
-  Key,
-  Clock,
-  DollarSign,
-  Phone,
-} from "lucide-react";
+  FaCar,
+  FaTruck,
+  FaUsers,
+  FaWrench,
+  FaMapMarkerAlt,
+  FaKey,
+  FaClock,
+  FaDollarSign,
+  FaPhone,
+  FaShieldAlt,
+  FaBolt,
+  FaExclamationTriangle,
+  FaGasPump,
+  FaUndo,
+  FaBox,
+} from "react-icons/fa";
 import img from "../Assets/bgDesign.jpg";
+import { Clock, DollarSign, Phone } from "lucide-react";
 
 export default function ServiceCards() {
   const services = [
     {
-      icon: Car,
-      title: "Light Duty Towing",
+      icon: <FaCar className="h-8 w-8 text-blue-400" />,
+      title: "24/7 Emergency Towing",
       description:
-        "Towing for cars, motorcycles, and small vehicles up to 10,000 lbs.",
+        "Towing for cars, SUVs, motorcycles, and light trucks across the metro area.",
       features: [
-        "Flatbed towing",
-        "Wheel lift options",
-        "Damage-free transport",
-        "Roadside pickup",
+        "Flatbed & wheel-lift towing",
+        "Citywide response",
+        "Damage-free handling",
       ],
       price: "$75+",
       responseTime: "15-30 min",
     },
     {
-      icon: Truck,
-      title: "Medium Duty Towing",
-      description: "Towing for box trucks, RVs, and vehicles up to 26,000 lbs.",
+      icon: <FaBolt className="h-8 w-8 text-blue-400" />,
+      title: "Jump Starts",
+      description: "Fast, reliable battery service wherever you’re stranded.",
       features: [
-        "Heavy-duty tools",
-        "Pro operators",
-        "Safe handling",
-        "Commercial support",
+        "Mobile jump service",
+        "Battery check",
+        "No start? We'll tow it.",
       ],
-      price: "$150+",
-      responseTime: "20-45 min",
+      price: "$50+",
+      responseTime: "15-25 min",
     },
     {
-      icon: Users,
-      title: "Heavy Duty Towing",
-      description:
-        "Solutions for commercial trucks, buses, and heavy equipment.",
+      icon: <FaWrench className="h-8 w-8 text-blue-400" />,
+      title: "Flat Tire Changes",
+      description: "Quick roadside tire replacements to get you moving again.",
       features: [
-        "Rotator recovery",
-        "Load adjustments",
-        "Accident response",
-        "Heavy gear",
+        "Spare tire installation",
+        "Tire inflation",
+        "On-spot service",
+      ],
+      price: "$45+",
+      responseTime: "15-30 min",
+    },
+    {
+      icon: <FaKey className="h-8 w-8 text-blue-400" />,
+      title: "Lockout Assistance",
+      description: "Non-damaging vehicle entry when keys are locked inside.",
+      features: [
+        "Quick entry tools",
+        "No damage guarantee",
+        "Car/Truck/Van access",
+      ],
+      price: "$60+",
+      responseTime: "15-30 min",
+    },
+    {
+      icon: <FaGasPump className="h-8 w-8 text-blue-400" />,
+      title: "Fuel Delivery",
+      description:
+        "Emergency fuel (gas or diesel) delivered directly to your location.",
+      features: ["Gas or diesel", "City-wide coverage", "On-demand delivery"],
+      price: "$40+",
+      responseTime: "15-30 min",
+    },
+    {
+      icon: <FaTruck className="h-8 w-8 text-blue-400" />,
+      title: "Heavy-Duty Towing",
+      description:
+        "For semi-trucks, buses, RVs, trailers, and heavy equipment.",
+      features: [
+        "Rotator & heavy winch",
+        "Licensed operators",
+        "Fleet transport",
       ],
       price: "Custom",
       responseTime: "30-60 min",
     },
     {
-      icon: Wrench,
-      title: "Roadside Assistance",
-      description: "Mobile support for flat tires, batteries, fuel, and more.",
-      features: ["Jump starts", "Tire change", "Fuel delivery", "Quick fixes"],
-      price: "$50+",
-      responseTime: "15-30 min",
+      icon: <FaExclamationTriangle className="h-8 w-8 text-blue-400" />,
+      title: "Breakdown Assistance",
+      description:
+        "On-site diagnostics for air brakes, cooling systems & more.",
+      features: ["Quick diagnostics", "Mobile repair assist", "Heavy vehicles"],
+      price: "Custom",
+      responseTime: "30-60 min",
     },
     {
-      icon: MapPin,
-      title: "Long Distance Towing",
-      description: "Secure vehicle transport over long interstate journeys.",
+      icon: <FaUndo className="h-8 w-8 text-blue-400" />,
+      title: "Winch-Outs & Off-Road Recovery",
+      description:
+        "Safe and efficient recovery for vehicles stuck in mud, ditches, or off-road.",
+      features: ["4x4 recovery", "Controlled winching", "Any terrain"],
+      price: "$125+",
+      responseTime: "30-60 min",
+    },
+    {
+      icon: <FaShieldAlt className="h-8 w-8 text-blue-400" />,
+      title: "Accident Recovery & Cleanup",
+      description:
+        "Complete recovery and site-clearing for private & commercial vehicles.",
+      features: ["Scene-safe towing", "Hazard cleanup", "Insurance support"],
+      price: "Custom",
+      responseTime: "ASAP",
+    },
+    {
+      icon: <FaBox className="h-8 w-8 text-blue-400" />,
+      title: "Load Shifts & Transfers",
+      description:
+        "Professional rebalancing or load transfers to keep you DOT-compliant.",
       features: [
-        "Interstate hauling",
-        "GPS tracked",
-        "Insured",
-        "Safe delivery",
+        "Load redistribution",
+        "Forklift & dock access",
+        "Logistics coordination",
       ],
-      price: "$2.50/mi",
+      price: "Custom",
       responseTime: "1-2 hrs",
     },
     {
-      icon: Key,
-      title: "Lockout & Recovery",
-      description: "Emergency unlocking and tough vehicle recoveries.",
-      features: ["Unlock cars", "Key cutting", "Winch-outs", "Recovery help"],
-      price: "$60+",
-      responseTime: "15-30 min",
+      icon: <FaUsers className="h-8 w-8 text-blue-400" />,
+      title: "Tire Service (Heavy-Duty)",
+      description:
+        "Roadside tire changes and minor repairs for commercial trucks & trailers.",
+      features: ["Tire swap", "Minor repairs", "DOT-certified service"],
+      price: "$125+",
+      responseTime: "45-60 min",
     },
   ];
 
@@ -96,7 +153,7 @@ export default function ServiceCards() {
         backgroundPosition: "center center",
         backgroundAttachment: "fixed",
       }}
-      className="md:py-24 py-10 bg-blend-multiply relative bg-[url('/pattern.svg')] bg-cover bg-center text-white"
+      className="md:py-24 py-10 relative bg-blend-multiply bg-cover bg-center text-white"
     >
       <div className="bg-black absolute top-0 left-0 h-full w-full opacity-20 inset-0"></div>
 
@@ -108,11 +165,12 @@ export default function ServiceCards() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-[3.2vh] md:text-[3.4vw] font-bold text-black mb-4 tracking-wide uppercase drop-shadow-md">
-            Premium Towing Services
+          <h2 className="text-[3.2vh] md:text-[3.4vw] font-bold text-black mb-4 uppercase drop-shadow-md">
+            Complete Roadside Services
           </h2>
           <p className="text-[2.4vh] md:text-[1.6vw] text-gray-700 max-w-2xl mx-auto ">
-            Reliable, fast, and professional solutions—wherever you need us.
+            Light-duty to heavy-duty—SpaceTime Towing is equipped to handle it
+            all.
           </p>
         </motion.div>
 
@@ -129,7 +187,7 @@ export default function ServiceCards() {
             >
               <div className="p-6">
                 <div className="flex items-center justify-center w-16 h-16 bg-blue-700/20 rounded-full mx-auto mb-5">
-                  <service.icon className="h-8 w-8 text-blue-400" />
+                  {service.icon}
                 </div>
                 <h3 className="text-[2.7vh] md:text-[2vw] font-semibold text-center mb-3 text-black">
                   {service.title}
@@ -167,6 +225,34 @@ export default function ServiceCards() {
             </motion.div>
           ))}
         </div>
+
+        {/* Service Area & Pricing Notice */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-20 max-w-4xl mx-auto bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-6 rounded-xl shadow-md"
+        >
+          <h3 className="text-2xl font-bold mb-3">
+            📍 Service Area & Pricing Notice
+          </h3>
+          <p className="mb-3">
+            We proudly serve customers inside and outside{" "}
+            <strong>Toll 99</strong>, including Houston and surrounding
+            counties.
+          </p>
+          <p className="font-semibold">
+            ⚠️ Services rendered{" "}
+            <span className="underline">outside of Toll 99</span> are charged at
+            long-haul rates.
+          </p>
+          <p>
+            This ensures we continue offering dependable coverage with fair,
+            transparent pricing.
+          </p>
+        </motion.div>
+
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

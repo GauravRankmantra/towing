@@ -9,31 +9,31 @@ export default function ServiceAreaMap() {
   const dispatchCenters = [
     {
       name: "Central Dispatch",
-      location: "Downtown Metro",
+      location: "Houston (All Wards & Suburbs)",
       trucks: 8,
       coords: { top: "45%", left: "50%" },
     },
     {
       name: "North Station",
-      location: "North County",
+      location: "Spring / The Woodlands",
       trucks: 6,
       coords: { top: "25%", left: "40%" },
     },
     {
       name: "South Hub",
-      location: "South Bay",
+      location: "Pearland / Pasadena",
       trucks: 7,
       coords: { top: "70%", left: "45%" },
     },
     {
       name: "East Center",
-      location: "East Valley",
+      location: "Baytown / Humble",
       trucks: 5,
       coords: { top: "50%", left: "75%" },
     },
     {
       name: "West Point",
-      location: "West Hills",
+      location: "Katy / Cypress / Sugar Land",
       trucks: 4,
       coords: { top: "40%", left: "25%" },
     },
@@ -53,8 +53,7 @@ export default function ServiceAreaMap() {
             Coverage Map & Dispatch Centers
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our strategically located dispatch centers ensure rapid response
-            times throughout the entire service area.
+            We proudly serve drivers across the Greater Houston area and beyond, providing fast, reliable roadside assistance and towing services for both light- and heavy-duty vehicles.
           </p>
         </motion.div>
 
@@ -142,45 +141,40 @@ export default function ServiceAreaMap() {
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Dispatch Centers
+              Local Coverage – Greater Houston
             </h3>
 
-            {dispatchCenters.map((center, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900">
-                      {center.name}
-                    </h4>
-                    <p className="text-gray-600">{center.location}</p>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Truck className="h-5 w-5 text-blue-600" />
-                    <span className="text-sm font-medium text-gray-900">
-                      {center.trucks} Trucks
-                    </span>
-                  </div>
-                </div>
+            <ul className="grid grid-cols-2 gap-3 text-gray-700 text-sm">
+              <li>Houston (All Wards & Suburbs)</li>
+              <li>Katy</li>
+              <li>Cypress</li>
+              <li>Sugar Land</li>
+              <li>Pearland</li>
+              <li>Pasadena</li>
+              <li>Spring</li>
+              <li>Tomball</li>
+              <li>The Woodlands</li>
+              <li>Humble</li>
+              <li>Baytown</li>
+              <li>And more — anywhere within Toll 99</li>
+            </ul>
 
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <Clock className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-600">15-30 min response</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-600">24/7 Operation</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+            <div className="mt-8">
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                Regional Coverage – Beyond Houston
+              </h4>
+              <p className="text-gray-600 text-sm">
+                We also offer extended roadside assistance and towing services throughout the state of Texas and neighboring regions for long-haul support, breakdowns, or accident recovery involving commercial or personal vehicles.
+              </p>
+
+              <div className="mt-4 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 text-sm rounded-md">
+                📍 All services rendered outside of Toll 99 are billed at long-haul pricing. This allows us to maintain dependable and timely service across longer distances while remaining competitive and transparent with our rates.
+              </div>
+
+              <p className="mt-6 text-gray-700 text-sm">
+                Whether you’re on a local job site, broken down along I-10, or miles out on a rural Texas highway, SpaceTime Towing & Recovery, LLC is the name to trust for prompt, professional service—any time, anywhere.
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>

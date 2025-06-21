@@ -7,6 +7,7 @@ import ContactBar from "@/components/ContactBar";
 import Footer from "@/components/Footer";
 import TestimonialSection from "../components/TestimonialSection";
 
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">

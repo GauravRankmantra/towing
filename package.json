@@ -49,7 +49,7 @@
     "eslint-config-next": "13.5.1",
     "framer-motion": "^10.16.4",
     "input-otp": "^1.2.4",
-    "lucide-react": "^0.446.0",
+    "lucide-react": "^0.519.0",
     "motion": "^12.18.1",
     "next": "13.5.1",
     "next-themes": "^0.3.0",
