@@ -126,16 +126,16 @@ export default function SearchResultsPage() {
               variants={sectionVariants}
               className="mb-8 pb-6 border-b border-gray-700"
             >
-              <h1 className="text-4xl font-extrabold text-gray-800 flex items-center mb-2">
-                <MapPin className="w-10 h-10 mr-3 text-blue-400" />
+              <h1 className="text-2xl md:text-4xl border-b border-gray-200 font-extrabold text-gray-800 flex items-center mb-2">
+                <MapPin className="w-8 h-8 md:w-10 md:h-10 mr-3 text-blue-400" />
                 {zipCodeData.zipCode}
               </h1>
-              <p className="text-2xl text-gray-900 flex items-center">
+              <p className="text-lg md:text-2xl text-gray-900 flex items-center">
                 <Locate className="w-6 h-6 mr-2 text-gray-800" />
                 {zipCodeData.cityName}
               </p>
               {zipCodeData.mapLink && (
-                <p className="mt-3 text-lg flex items-center text-gray-300">
+                <p className="mt-3 text-sm md:text-lg flex items-center text-gray-300">
                   <Globe className="w-5 h-5 mr-2 text-gray-400" />
                   <a
                     href={zipCodeData.mapLink}
@@ -154,7 +154,7 @@ export default function SearchResultsPage() {
             </motion.div>
 
             <motion.div variants={sectionVariants} className="mt-10">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+              <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6 flex items-center">
                 <Building2 className="w-8 h-8 mr-3 text-green-400" />
                 Towing Companies ({zipCodeData.companies.length})
               </h2>
@@ -169,7 +169,7 @@ export default function SearchResultsPage() {
                     animate="visible"
                     className="bg-gray-800 rounded-2xl shadow-lg p-4 md:p-6 border border-gray-700 hover:border-green-400 transition"
                   >
-                    <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 flex items-center">
                       <Building2 className="w-6 h-6 mr-3 text-green-500" />
                       {company.name}
                     </h3>
