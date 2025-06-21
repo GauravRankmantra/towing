@@ -86,7 +86,7 @@ export default function ServicesOverview() {
   );
 
   return (
-    <section className="relative z-0 py-24 bg-gradient-to-tr from-white via-slate-50 to-white overflow-hidden">
+    <section className="relative z-0 py-20 bg-gradient-to-tr from-white via-slate-50 to-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-purple-100/10 blur-3xl -z-10" />
 
       <div className="container mx-auto px-4">
@@ -95,7 +95,7 @@ export default function ServicesOverview() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center  mb-8 md:mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
             Complete Towing Solutions
