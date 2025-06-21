@@ -63,7 +63,7 @@ export default function ServicesOverview() {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
       whileHover={{ scale: 1.03 }}
-      className="relative group rounded-3xl border border-white/10 bg-white/80 backdrop-blur-xl shadow-md hover:shadow-xl p-6 transition-all duration-300"
+      className="relative group rounded-3xl border border-white/10  backdrop-blur-xl shadow-md hover:shadow-xl p-6 transition-all duration-300"
     >
       <div className="absolute -top-10 -right-10 w-36 h-36 bg-blue-500/30 blur-3xl rounded-full opacity-20 group-hover:opacity-40 transition-all -z-10" />
 
