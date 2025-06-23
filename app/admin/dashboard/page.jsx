@@ -12,8 +12,10 @@ import {
   Users,
   Phone,
 } from "lucide-react";
-import { useEffect, useState } from "react";
 import axios from "axios";
+
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const recentActivities = [
   {
@@ -57,6 +59,11 @@ const recentActivities = [
 export default function Dashboard() {
   const [totalZipCodes, setTotalZipCodes] = useState(0);
   const [totalCompanies, setTotalCompanies] = useState(0);
+  const router = useRouter();
+
+  const handleclick = () => {
+    router.push("/admin/zip-codes");
+  };
 
   useEffect(() => {
     const fetchStats = async () => {
@@ -205,8 +212,9 @@ export default function Dashboard() {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">
               Quick Actions
             </h2>
-            <div className="space-y-3">
+            <div  className="space-y-3">
               <motion.button
+               onClick={handleclick}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
@@ -216,6 +224,7 @@ export default function Dashboard() {
               </motion.button>
 
               <motion.button
+               onClick={handleclick}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-green-600 hover:bg-green-700 text-white p-3 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
@@ -225,6 +234,7 @@ export default function Dashboard() {
               </motion.button>
 
               <motion.button
+               onClick={handleclick}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
