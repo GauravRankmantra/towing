@@ -44,11 +44,6 @@ export default function ZipCodes() {
     fetchZipCodes();
   }, [fetchZipCodes]);
 
-  /**
-   * Handles adding or updating a zip code and its companies.
-   * This function receives the entire form data from ZipCodeForm.
-   * @param {object} data The complete form data including zipCode, cityName, mapLink, and companies array.
-   */
   const handleFormSubmit = async (data) => {
     setSubmitLoading(true); // Set loading for the entire submission process
     setError(null);
@@ -143,6 +138,14 @@ export default function ZipCodes() {
 
       await Promise.all(companyPromises); // Wait for all company operations to complete
 
+      if (data.removedCompanyIds && data.removedCompanyIds.length) {
+        await Promise.all(
+          data.removedCompanyIds.map((id) =>
+            axios.delete(`${API_BASE_URL}/deletecompany/${id}`)
+          )
+        );
+        toast.success(`${data.removedCompanyIds.length} companies removed.`);
+      }
       // After all operations, refetch zip codes to update the list
       await fetchZipCodes();
       setShowForm(false);
@@ -159,11 +162,6 @@ export default function ZipCodes() {
     }
   };
 
-  /**
-   * Handles initiating the edit mode for a specific zip code.
-   * Fetches full zip code data including companies to populate the form.
-   * @param {object} zipCode The summary zip code object from the list.
-   */
   const handleEdit = async (zipCode) => {
     setIsLoading(true);
     setError(null);
