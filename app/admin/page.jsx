@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { ArrowLeftFromLine } from "lucide-react";
-
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -167,12 +165,6 @@ export default function LoginPage() {
             </p>
           </form>
         )}
-        <div className="flex items-center mt-4 justify-center">
-          <ArrowLeftFromLine className="w-10 " />
-          <button onClick={() => router.push("/")} className="text-center ">
-            Go to Homepage
-          </button>
-        </div>
       </div>
     </div>
   );
