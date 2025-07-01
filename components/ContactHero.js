@@ -32,14 +32,14 @@ export default function ContactHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:+1234567"
+                href="tel:888-468-5561"
                 className="flex items-center justify-center space-x-2 bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold"
               >
                 <Phone className="h-5 w-5" />
                 <span>Call Now</span>
               </a>
               <a
-                href="mailto:Tech@SpaceTimeNews.news"
+                href="mailto:Service@SpaceTimeTowing.com"
                 className="flex items-center justify-center space-x-2 border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold"
               >
                 <Mail className="h-5 w-5" />
@@ -62,8 +62,8 @@ export default function ContactHero() {
                 Emergency Line
               </h3>
               <p className="text-blue-200 text-sm mb-3">Available 24/7</p>
-              <a href="tel:+15551234567" className="text-white font-medium">
-                1234567
+              <a href="tel:888-468-5561" className="text-white font-medium">
+                888-468-5561
               </a>
             </div>
 
@@ -73,10 +73,10 @@ export default function ContactHero() {
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
               <p className="text-blue-200 text-sm mb-3">General inquiries</p>
               <a
-                href="mailto:Tech@SpaceTimeNews.news"
+                href="mailto:Service@SpaceTimeTowing.com"
                 className="text-white font-medium"
               >
-                Tech@SpaceTimeNews.news
+                Service@SpaceTimeTowing.com
               </a>
             </div>
 
@@ -84,14 +84,10 @@ export default function ContactHero() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <MapPin className="h-8 w-8 text-blue-300 mb-3" />
               <h3 className="text-lg font-semibold text-white mb-2">
-                Location
+                Service Area
               </h3>
-              <p className="text-blue-200 text-sm mb-3">Main office</p>
-              <p className="text-white font-medium">
-                1829 Pearl St
-                <br />
-                Houston, TX 77029
-              </p>
+              <p className="text-blue-200 text-sm mb-3">Main service area</p>
+              <p className="text-white font-medium">Houston, Texas</p>
             </div>
 
             {/* Card 4 */}

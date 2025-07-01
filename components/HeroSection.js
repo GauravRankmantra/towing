@@ -134,10 +134,8 @@ export default function HeroSection() {
 
           <motion.p
             style={{
-
               textShadow: "2px 2px 4px rgba(0,0,0,0.7)",
             }}
-
             variants={itemVariants}
             className="flex  text-base md:text-xl py-2 text-white mb-8 md:mb-10 max-w-2xl mx-auto drop-shadow-md" /* Adjusted text size for better mobile fit */
           >
@@ -151,7 +149,7 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center mb-12 md:mb-16" /* Adjusted gap for mobile */
           >
             <motion.a
-              href="tel:+1234567"
+              href="tel:888-468-5561"
               variants={buttonVariants}
               whileHover={{
                 scale: 1.05,
@@ -162,11 +160,11 @@ export default function HeroSection() {
             >
               <Phone className="h-5 w-5" />{" "}
               {/* Adjusted icon size for mobile */}
-              <span>Call Now : 1234567</span>
+              <span>Call Now: 888-468-5561</span>
             </motion.a>
 
             <motion.a
-              href="#" // Update with your actual service request page
+              href="/contact" // Update with your actual service request page
               variants={buttonVariants}
               whileHover={{
                 scale: 1.05,
@@ -183,7 +181,7 @@ export default function HeroSection() {
 
           {/* Trust Indicators */}
           <motion.div
-          style={{marginTop:"100px"}}
+            style={{ marginTop: "100px" }}
             initial="hidden"
             animate="visible"
             variants={containerVariants} // Stagger indicators
@@ -196,9 +194,7 @@ export default function HeroSection() {
               <Clock className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
               {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold  md:text-xl">
-                  15-30 Min
-                </div>{" "}
+                <div className="font-semibold  md:text-xl">15-30 Min</div>{" "}
                 {/* Adjusted text size for mobile */}
                 <div className="text-[0.60rem] md:text-sm text-blue-100">
                   Response Time
@@ -214,9 +210,7 @@ export default function HeroSection() {
               <Shield className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
               {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold md:text-xl">
-                  Fully Insured
-                </div>{" "}
+                <div className="font-semibold md:text-xl">Fully Insured</div>{" "}
                 {/* Adjusted text size for mobile */}
                 <div className="text-[0.60rem] md:text-sm text-blue-100">
                   Licensed & Bonded
@@ -232,9 +226,7 @@ export default function HeroSection() {
               <Zap className="h-8 w-8 md:h-10 md:w-10 text-blue-300" />{" "}
               {/* Adjusted icon size for mobile */}
               <div className="text-left">
-                <div className="font-semibold  md:text-xl">
-                  24/7 Available
-                </div>{" "}
+                <div className="font-semibold  md:text-xl">24/7 Available</div>{" "}
                 {/* Adjusted text size for mobile */}
                 <div className="text-[0.60rem] md:text-sm text-blue-100">
                   Always Ready

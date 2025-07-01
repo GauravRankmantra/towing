@@ -23,12 +23,11 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/services', label: 'Services' },
-  { href: '/service-area', label: 'Service Area' },
-  { href: '/contact', label: 'Contact' },
-
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/service-area", label: "Service Area" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -79,7 +78,7 @@ export default function Navigation() {
               Request Service
             </Link> */}
             <a
-              href="tel:+15551234567"
+              href="tel:888-468-5561"
               className="flex items-center space-x-2 bg-red-600 text-white px-4 py-4 rounded-lg hover:bg-red-700 transition-colors text-sm font-medium"
             >
               <Phone className="h-4 w-4" />
@@ -129,7 +128,7 @@ export default function Navigation() {
                     Request Service
                   </Link>
                   <a
-                    href="tel:+15551234567"
+                    href="tel:888-468-5561"
                     className="flex items-center justify-center space-x-2 w-full bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm font-medium"
                   >
                     <Phone className="h-4 w-4" />

@@ -154,7 +154,7 @@ export default function CoverageAreas() {
                 </div>
 
                 <a
-                  href="tel:+15551234567"
+                  href="tel:888-468-5561"
                   className="flex items-center justify-center space-x-2 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
                 >
                   <Phone className="h-4 w-4" />

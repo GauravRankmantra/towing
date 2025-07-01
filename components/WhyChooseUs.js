@@ -104,13 +104,13 @@ export default function WhyChooseUs() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+15551234567"
+                href="tel:888-468-5561"
                 className="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold"
               >
-                Call Now: (555) 123-TOWS
+                Call Now: 888-468-5561 
               </a>
               <a
-                href="/request-service"
+                href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
               >
                 Request Service Online

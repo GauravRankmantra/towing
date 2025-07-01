@@ -90,7 +90,7 @@ export default function TermsCondition() {
                 {/* CTA Buttons */}
                 <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-8">
                   <motion.a
-                    href="tel:+1234567890"
+                    href="tel:888-468-5561"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center space-x-3 bg-red-600 text-white px-8 py-4 rounded-xl hover:bg-red-700 transition-colors text-lg font-semibold shadow-lg"

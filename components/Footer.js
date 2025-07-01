@@ -11,15 +11,17 @@ import {
   Facebook,
   Twitter,
   Instagram,
+  Youtube,
+  MessageCircle,
 } from "lucide-react";
 
 export default function Footer() {
   const quickLinks = [
     { href: "/", label: "Home" },
-    { href: "/", label: "About Us" },
-    { href: "/", label: "Services" },
-    { href: "/", label: "Service Area" },
-    { href: "/", label: "Contact" },
+    { href: "/about", label: "About Us" },
+    { href: "/services", label: "Services" },
+    { href: "/service-area", label: "Service Area" },
+    { href: "/contact", label: "Contact" },
     { href: "/termsandconditions", label: "Terms & Conditions" },
   ];
 
@@ -56,22 +58,36 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/SpaceTimeTowing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
               >
                 <Facebook className="h-6 w-6" />
               </a>
               <a
-                href="#"
+                href="https://x.com/spacetimetowing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
               >
                 <Twitter className="h-6 w-6" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/spacetimetowing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
               >
                 <Instagram className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.youtube.com/@SpaceTimeTowing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-red-400 transition-colors"
+              >
+                <Youtube className="h-6 w-6" />
               </a>
             </div>
           </motion.div>
@@ -126,27 +142,33 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400" />
-                <a
-                  href="tel:+1234567"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  1234567
-                </a>
+                <div>
+                  <a
+                    href="tel:888-468-5561"
+                    className="text-gray-300 hover:text-blue-400 transition-colors block"
+                  >
+                    Toll Free: 888-468-5561
+                  </a>
+                  <a
+                    href="tel:832-737-8421"
+                    className="text-gray-300 hover:text-blue-400 transition-colors block"
+                  >
+                    Local: 832-SERVIC1
+                  </a>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
                 <a
-                  href="mailto:info@SpaceTimetowing.com"
+                  href="mailto:Service@SpaceTimeTowing.com"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
-                  Tech@SpaceTimeNews.news
+                  Service@SpaceTimeTowing.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">
-                  1829 Pearl St Houston, TX 77029
-                </span>
+                <span className="text-gray-300">Houston, Texas</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-blue-400" />
@@ -160,9 +182,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 py-3">
         <p className="text-center font-[500]">
-          {" "}
-          © 2025. All rights reserved.
-          {/* <span className="text-[#D83030] font-[600]">Rank</span>mantra */}
+          SpaceTime Towing & Recovery, LLC. © 2025. All rights reserved.
         </p>
       </div>
     </footer>

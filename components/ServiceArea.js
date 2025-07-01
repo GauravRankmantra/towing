@@ -83,14 +83,14 @@ export default function ServiceArea() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/"
-                // href="/service-area"
+                // href="/"
+                href="/service-area"
                 className="bg-blue-600 text-white px-6 py-3 rounded-full text-center text-sm font-semibold shadow-lg hover:opacity-90 transition"
               >
                 View Full Coverage Map
               </Link>
               <a
-                href="tel:+12345"
+                href="tel:888-468-5561"
                 className="flex items-center justify-center gap-2 border border-blue-600 text-blue-700 px-6 py-3 rounded-full text-sm font-semibold hover:bg-blue-600 hover:text-white transition"
               >
                 <Phone className="w-4 h-4" />

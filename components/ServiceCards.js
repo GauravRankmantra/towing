@@ -216,7 +216,7 @@ export default function ServiceCards() {
                   </div>
                 </div>
                 <a
-                  href="tel:+15551234567"
+                  href="tel:888-468-5561"
                   className="mt-6 block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-xl font-semibold transition-colors text-[2vh] md:text-[1.4vw]"
                 >
                   Call for This Service
@@ -270,11 +270,11 @@ export default function ServiceCards() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+15551234567"
+                href="tel:888-468-5561"
                 className="flex items-center justify-center space-x-2 bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition font-semibold text-[2.3vh] md:text-[1.4vw]"
               >
                 <Phone className="h-5 w-5" />
-                <span>(555) 123-TOWS</span>
+                <span>888-468-5561</span>
               </a>
               <a
                 href="/request-service"
