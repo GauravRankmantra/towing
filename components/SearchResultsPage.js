@@ -24,46 +24,46 @@ import {
 export const dynamic = "force-dynamic";
 const API_BASE_URL = "https://towing-backend.onrender.com/api/v1/zip";
 
-export default function SearchResultsPage() {
-  const params = useParams();
-  const zipCodeId = params?.zipCodeId;
-  const router = useRouter();
+export default function SearchResultsPage({zipCodeData}) {
+  // const params = useParams();
+  // const zipCodeId = params?.zipCodeId;
+  // const router = useRouter();
 
-  const [zipCodeData, setZipCodeData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [zipCodeData, setZipCodeData] = useState(zipCodeData);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    if (zipCodeId) {
-      const fetchZipCodeDetails = async () => {
-        setIsLoading(true);
-        setError(null);
-        try {
-          const response = await axios.get(`${API_BASE_URL}/${zipCodeId}`);
-          if (response.data?.data) {
-            setZipCodeData(response.data.data);
-            toast.success("Zip code details loaded successfully!");
-          } else {
-            throw new Error("Zip code details not found.");
-          }
-        } catch (err) {
-          console.error("Error fetching zip code details:", err);
-          setError(
-            err.response?.data?.message ||
-              "Failed to load details. Please try again."
-          );
-          toast.error("Something went wrong while fetching data.");
-        } finally {
-          setIsLoading(false);
-        }
-      };
+  // useEffect(() => {
+  //   if (zipCodeId) {
+  //     const fetchZipCodeDetails = async () => {
+  //       setIsLoading(true);
+  //       setError(null);
+  //       try {
+  //         const response = await axios.get(`${API_BASE_URL}/${zipCodeId}`);
+  //         if (response.data?.data) {
+  //           setZipCodeData(response.data.data);
+  //           toast.success("Zip code details loaded successfully!");
+  //         } else {
+  //           throw new Error("Zip code details not found.");
+  //         }
+  //       } catch (err) {
+  //         console.error("Error fetching zip code details:", err);
+  //         setError(
+  //           err.response?.data?.message ||
+  //             "Failed to load details. Please try again."
+  //         );
+  //         toast.error("Something went wrong while fetching data.");
+  //       } finally {
+  //         setIsLoading(false);
+  //       }
+  //     };
 
-      fetchZipCodeDetails();
-    } else {
-      setIsLoading(false);
-      setError("No zip code ID provided in the URL.");
-    }
-  }, [zipCodeId]);
+  //     fetchZipCodeDetails();
+  //   } else {
+  //     setIsLoading(false);
+  //     setError("No zip code ID provided in the URL.");
+  //   }
+  // }, [zipCodeId]);
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -88,21 +88,21 @@ export default function SearchResultsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-100 text-white p-2 sm:p-6 md:p-10 lg:p-14 font-inter">
+    <div className="min-h-screen font-inter">
       <motion.div
         initial="hidden"
         animate="visible"
         variants={sectionVariants}
-        className=" mx-auto bg-gray-100 my-24 md:my-10 rounded-3xl shadow-2xl p-4 sm:p-10 md:p-12 "
+        className=" mx-auto bg-gray-100  md:my-10 rounded-3xl shadow-2xl p-2 sm:p-10 md:p-12 "
       >
-        <motion.button
+        {/* <motion.button
           onClick={() => router.back()}
           whileHover={{ x: -5 }}
           className="flex items-center text-blue-600 hover:text-blue-700 font-medium mb-8 transition-colors duration-200"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Search
-        </motion.button>
+        </motion.button> */}
 
         {isLoading ? (
           <div className="flex flex-col items-center justify-center py-20 text-blue-400">
