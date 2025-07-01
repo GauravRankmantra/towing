@@ -18,6 +18,7 @@ import {
   Hammer,
   Car,
 } from "lucide-react";
+import SearchResultsPage from "./SearchResultsPage";
 
 // Base URL for the API. In a real application, this would be an environment variable.
 const BASE_URL = "https://towing-backend.onrender.com/api/v1/zip";
@@ -30,7 +31,7 @@ export default function ZipCodeSearch() {
   const [error, setError] = useState(null); // State to store any error messages
 
   const router = useRouter(); // Next.js router hook for navigation
-
+   const [selectedItem, setSelectedItem] = useState(null);
   /**
    * Handles the search operation based on the current search term and type.
    * Fetches data from the API and updates the results state.
@@ -41,6 +42,7 @@ export default function ZipCodeSearch() {
       toast.error("Please enter a search term.");
       return;
     }
+ 
 
     setIsLoading(true); // Set loading state to true
     setError(null); // Clear any previous errors
@@ -181,7 +183,8 @@ export default function ZipCodeSearch() {
               boxShadow: "0 10px 20px rgba(0,0,0,0.08)",
             }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => router.push(`/search-results/${item._id}`)}
+            // onClick={() => router.push(`/search-results/${item._id}`)}
+            onClick={() => setSelectedItem(item)}
             className="bg-white  rounded-3xl shadow-lg p-6 border border-blue-100 cursor-pointer overflow-hidden transform transition-all duration-300"
           >
             <div className="flex flex-col h-full">
@@ -323,7 +326,7 @@ export default function ZipCodeSearch() {
           transition={{ duration: 0.5 }}
           className="text-4xl sm:text-5xl font-extrabold text-center mb-6 text-blue-950 tracking-tight"
         >
-          Search towing near you 
+          Search towing near you
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: -20 }}
@@ -430,6 +433,19 @@ export default function ZipCodeSearch() {
         )}
 
         <AnimatePresence mode="wait">{contentToRender}</AnimatePresence>
+        {selectedItem && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-4">
+            <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-xl p-2 md:p-6 relative">
+              <button
+                onClick={() => setSelectedItem(null)}
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-xl"
+              >
+                &times;
+              </button>
+              <SearchResultsPage zipCodeData={selectedItem} />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ import {
   MessageSquare,
   X,
   LogOut,
+  DatabaseZap,
 } from "lucide-react";
 
 const navigation = [
@@ -24,12 +25,12 @@ const navigation = [
     href: "/admin/zip-codes",
     icon: MapPin,
   },
-  // {
-  //   name: "Cities",
-  //   // href: '/admin/cities',
-  //   href: "/admin",
-  //   icon: Building2,
-  // },
+  { 
+    name: "Bulk Upload",
+    // href: '/admin/cities',
+    href: "/admin/bulk-upload",
+    icon: DatabaseZap,
+  },
   {
     name: "Contact Inquiries",
     href: '/admin/contacts',
