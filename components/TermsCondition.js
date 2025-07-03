@@ -96,17 +96,17 @@ export default function TermsCondition() {
                     className="flex items-center space-x-3 bg-red-600 text-white px-8 py-4 rounded-xl hover:bg-red-700 transition-colors text-lg font-semibold shadow-lg"
                   >
                     <Phone className="h-6 w-6" />
-                    <span>Phone: PENDENT</span>
+                    <span>Phone:888-468-5561</span>
                   </motion.a>
 
                   <motion.a
-                    href="mailto:info@spacetimetowing.com"
+                    href="mailto:Service@SpaceTimeTowing.com"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center space-x-3 bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors text-lg font-semibold shadow-lg"
                   >
                     <Mail className="h-6 w-6" />
-                    <span>Email: PENDENT</span>
+                    <span>Email: Service@SpaceTimeTowing.com</span>
                   </motion.a>
                 </div>
 
