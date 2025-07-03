@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Phone, MessageSquare, Clock } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Phone, MessageSquare, Clock } from "lucide-react";
 
 export default function RequestServiceHero() {
   return (
@@ -17,26 +17,29 @@ export default function RequestServiceHero() {
             Request Service
             <span className="text-blue-300 block">Online</span>
           </h1>
-          
+
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Fill out our quick form below or call us directly for immediate assistance. 
-            We'll get back to you within minutes with confirmation and estimated arrival time.
+            Fill out our quick form below or call us directly for immediate
+            assistance. We'll get back to you within minutes with confirmation
+            and estimated arrival time.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href="tel:+15551234567"
+              href="tel:888-468-5561"
               className="flex items-center justify-center space-x-2 bg-red-600 text-white px-8 py-4 rounded-xl hover:bg-red-700 transition-colors text-lg font-semibold"
             >
               <Phone className="h-6 w-6" />
-              <span>Call Now: (555) 123-TOWS</span>
+              <span>Call Now: 888-468-5561</span>
             </a>
             <a
-              href="sms:+15551234567"
+              href="https://wa.me/18322256273"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 bg-green-600 text-white px-8 py-4 rounded-xl hover:bg-green-700 transition-colors text-lg font-semibold"
             >
               <MessageSquare className="h-6 w-6" />
-              <span>Text Us</span>
+              <span>WhatsApp</span>
             </a>
           </div>
 

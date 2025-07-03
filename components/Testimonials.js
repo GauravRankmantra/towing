@@ -38,13 +38,13 @@ export default function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <motion.a
-              href="tel:+1234567"
+              href="tel:888-468-5561"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center justify-center space-x-3 bg-[#A18B6A] text-white px-8 py-4 rounded-xl hover:bg-[#8c7757] transition-colors text-lg font-semibold shadow-lg"
             >
               <Phone className="h-6 w-6" />
-              <span>Call Now : 1234567</span>
+              <span>Call Now: 888-468-5561</span>
             </motion.a>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

@@ -9,6 +9,7 @@ import {
   Facebook,
   Twitter,
   Instagram,
+  Youtube,
 } from "lucide-react";
 
 export default function ContactInfo() {
@@ -18,28 +19,37 @@ export default function ContactInfo() {
       title: "Emergency Hotline",
       description:
         "Available 24/7 for emergency towing and roadside assistance",
-      value: "1234567",
-      action: "tel:+1234567",
+      value: "Toll Free: 888-468-5561",
+      action: "tel:888-468-5561",
       color: "text-red-600",
       bgColor: "bg-red-50",
+    },
+    {
+      icon: Phone,
+      title: "Local Service",
+      description: "Local Houston area service number",
+      value: "832-SERVIC1 (832-737-8421)",
+      action: "tel:832-737-8421",
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
     },
     {
       icon: Mail,
       title: "Email Us",
       description: "General inquiries and non-emergency requests",
-      value: "Tech@SpaceTimeNews.news",
-      action: "mailto:Tech@SpaceTimeNews.news",
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
+      value: "Service@SpaceTimeTowing.com",
+      action: "mailto:Service@SpaceTimeTowing.com",
+      color: "text-green-600",
+      bgColor: "bg-green-50",
     },
     {
       icon: MapPin,
-      title: "Visit Our Office",
-      description: "Main office and dispatch center",
-      value: "1829 Pearl St Houston, TX 77029",
+      title: "Service Area",
+      description: "Main service area and dispatch center",
+      value: "Houston, Texas",
       action: "https://maps.google.com",
-      color: "text-green-600",
-      bgColor: "bg-green-50",
+      color: "text-purple-600",
+      bgColor: "bg-purple-50",
     },
   ];
 
@@ -157,22 +167,36 @@ export default function ContactInfo() {
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
         <div className="flex space-x-4">
           <a
-            href="#"
+            href="https://www.facebook.com/SpaceTimeTowing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
           >
             <Facebook className="h-5 w-5" />
           </a>
           <a
-            href="#"
-            className="flex items-center justify-center w-10 h-10 bg-blue-400 text-white rounded-full hover:bg-blue-500 transition-colors"
+            href="https://x.com/spacetimetowing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
           >
             <Twitter className="h-5 w-5" />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/spacetimetowing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center w-10 h-10 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-colors"
           >
             <Instagram className="h-5 w-5" />
+          </a>
+          <a
+            href="https://www.youtube.com/@SpaceTimeTowing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-10 h-10 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors"
+          >
+            <Youtube className="h-5 w-5" />
           </a>
         </div>
         <p className="text-gray-600 text-sm mt-4">

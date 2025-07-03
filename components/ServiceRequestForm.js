@@ -324,7 +324,7 @@ export default function ServiceRequestForm() {
                   assistance.
                 </p>
                 <a
-                  href="tel:+15551234567"
+                  href="tel:888-468-5561"
                   className="flex items-center justify-center space-x-2 bg-red-600 text-white px-4 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold"
                 >
                   <Phone className="h-5 w-5" />
@@ -391,16 +391,19 @@ export default function ServiceRequestForm() {
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-blue-600" />
                     <a
-                      href="tel:+15551234567"
+                      href="tel:888-468-5561"
                       className="text-blue-600 hover:text-blue-800 font-medium"
                     >
-                      (555) 123-TOWS
+                      888-468-5561
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-blue-600" />
-                    <a href="mailto:dispatch@SpaceTimetowing.com" className="text-blue-600 hover:text-blue-800 font-medium">
-                      dispatch@SpaceTimetowing.com
+                    <a
+                      href="mailto:Service@SpaceTimeTowing.com"
+                      className="text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      Service@SpaceTimeTowing.com
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">

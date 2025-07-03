@@ -46,7 +46,7 @@ export default function AboutHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:+15551234567"
+                href="tel:888-468-5561"
                 className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold text-center"
               >
                 Call Now: (555) 123-TOWS

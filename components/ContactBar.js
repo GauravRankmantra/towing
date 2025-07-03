@@ -25,23 +25,25 @@ export default function ContactBar() {
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             <div className="flex gap-2 ">
               <motion.a
-                href="tel:+12345"
+                href="tel:888-468-5561"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center space-x-3 bg-red-600 text-white px-8 py-4 rounded-xl hover:bg-red-700 transition-colors text-lg font-semibold shadow-lg"
               >
                 <Phone className="h-6 w-6" />
-                <span>1234567</span>
+                <span>888-468-5561</span>
               </motion.a>
 
               <motion.a
-                href="sms:+1234567"
+                href="https://wa.me/18322256273"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center space-x-3 bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-green-700 transition-colors text-lg font-semibold shadow-lg"
+                className="flex items-center space-x-3 bg-green-600 text-white px-8 py-4 rounded-xl hover:bg-green-700 transition-colors text-lg font-semibold shadow-lg"
               >
                 <MessageCircle className="h-6 w-6" />
-                <span>Text Us</span>
+                <span>WhatsApp</span>
               </motion.a>
             </div>
 
